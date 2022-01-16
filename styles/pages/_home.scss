@@ -1,0 +1,13 @@
+.aurora-bg {
+  @apply absolute flex inset-0 -top-20 -z-1;
+
+  picture {
+    @apply w-full;
+  }
+
+  &:before {
+    content: "";
+    @apply w-full h-1/5 absolute top-0 left-0;
+    // background: linear-gradient(to bottom, rgba(248, 250, 252, 1) 0%, rgba(248, 250, 252, 1) 45%, rgba(248, 250, 252, 0) 100%);
+  }
+}
