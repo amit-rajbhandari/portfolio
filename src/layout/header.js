@@ -12,7 +12,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="main-header">
+    <header className={`main-header ${theme}`}>
       <div className="container flex justify-between items-center mx-auto px-5">
         <h1 className="text-purple-900 dark:text-white text-lg font-medium">
           <Image
@@ -25,7 +25,7 @@ const Header = () => {
 
         <nav className="header-navigation">
           <Link href="/" passHref>
-            <a href="replace">About</a>
+            <a href="replace" className="active">About</a>
           </Link>
           <Link href="/" passHref>
             <a href="replace">Experince</a>

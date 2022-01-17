@@ -1,17 +1,63 @@
 .main-header {
   @apply w-full h-24 absolute top-0 left-0 py-5 z-10;
-}
 
-.header-navigation {
-  a {
-    @apply px-4 text-primary-500 font-medium;
-  }
-}
-
-@at-root .dark {
   .header-navigation {
+    @apply flex flex-1 justify-center;
+
     a {
-      @apply text-slate-100;
+      @apply relative mx-6 px-4 font-medium;
+
+      &:before,
+      &:after {
+        content: "";
+        transform: translateY(-50%);
+        transition: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        @apply w-3 h-6 absolute top-1/2 border border-solid border-primary-500 opacity-0;
+      }
+
+      &:before {
+        content: "";
+        @apply -left-3 rounded-bl-3xl rounded-tl-3xl border-r-0;
+      }
+
+      &:after {
+        content: "";
+        @apply -right-3 rounded-br-3xl rounded-tr-3xl border-l-0;
+      }
+
+      &.active {
+        @apply text-primary-500;
+
+        &:before,
+        &:after {
+          @apply opacity-100;
+        }
+
+        &:before {
+          @apply left-0
+        }
+
+        &:after {
+          @apply right-0;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    .header-navigation {
+      a {
+        @apply text-slate-400;
+
+        &:before,
+        &:after {
+          @apply border-red-500;
+        }
+
+        &.active {
+          @apply text-red-500
+        }
+      }
     }
   }
 }
