@@ -1,12 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap');
 
 html,
 body {
-  @apply text-black font-montserrat;
+  @apply text-black font-exo;
 
   &.dark {
     body {
       @apply bg-dark-500 text-slate-300;
     }
   }
+}
+
+h1 {
+  font-family: "Exo 2";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+
+  @include media-breakpoint-down('xl') {
+    font-size: 2.375rem;
+    line-height: 3.2rem;
+  }
+}
+
+h2 {
+  font-family: "Exo 2";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+
+  @include media-breakpoint-down('xl') {
+    font-size: 1.875rem;
+    line-height: 2.6rem;
+  }
+}
+
+h3 {
+  font-family: "Exo 2";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-family: "Exo 2";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35rem;
 }

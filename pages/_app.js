@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { ThemeProvider } from "next-themes";
+import "../styles/vendor.scss";
 import "../styles/tailwind.scss";
 import "../styles/main.scss";
 

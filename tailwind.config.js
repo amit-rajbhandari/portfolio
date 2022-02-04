@@ -2,6 +2,10 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "0.75rem",
+    },
     extend: {
       width: {
         sm: "640px",
@@ -14,8 +18,9 @@ module.exports = {
         body: "#ffffff",
       },
       backgroundImage: {
-        "aurora-light": "url(/images/aurora-bg-light.jpg)",
-        "aurora-dark": "url(/images/aurora-bg-dark.jpg)",
+        "aurora-bg": "url(/images/aurora-bg-2.svg)",
+        "grad-1":
+          "linear-gradient(45deg, rgba(40,111,107,1) 49%,rgba(242,100,65,1) 93%,rgba(239,192,73,1) 100%)",
       },
       colors: {
         primary: {
@@ -52,19 +57,29 @@ module.exports = {
           900: "#30140d",
         },
         dark: {
-          100: "#ccd2d4",
-          200: "#99a5aa",
-          300: "#66777f",
-          400: "#334a55",
-          500: "#001d2a",
-          600: "#001722",
-          700: "#001119",
-          800: "#000c11",
-          900: "#000608",
+          100: "#d3d3d9",
+          200: "#a7a8b3",
+          300: "#7c7c8c",
+          400: "#505166",
+          500: "#242540",
+          600: "#1d1e33",
+          700: "#161626",
+          800: "#0e0f1a",
+          900: "#07070d",
         },
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        exo: ["Exo", "sans-serif"],
+        exo2: ["Exo 2", "sans-serif"],
+      },
+      animation: {
+        fadeInTop: "fadeInTop 1s ease-in forwards",
+      },
+      keyframes: {
+        fadeInTop: {
+          "0%": { opacity: 0, transform: "translateY(50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
     },
     zIndex: {

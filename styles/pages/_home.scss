@@ -11,3 +11,141 @@
     // background: linear-gradient(to bottom, rgba(248, 250, 252, 1) 0%, rgba(248, 250, 252, 1) 45%, rgba(248, 250, 252, 0) 100%);
   }
 }
+
+.section-divider {
+
+  >section {
+    @apply relative;
+
+    &:before {
+      content: "";
+      background: linear-gradient(to bottom, #f26441 0%, #286f6b 100%);
+      @apply w-1 h-16 absolute -bottom-8 left-1/2 rounded-lg -translate-x-1/2;
+    }
+
+    &:after {
+      content: "";
+      @apply w-1/2 absolute bottom-0 left-0 border-b border-dashed border-slate-500;
+    }
+
+    &:nth-child(even) {
+      &:after {
+        content: "";
+        @apply left-auto right-0;
+      }
+    }
+
+    &:last-child {
+
+      &:before,
+      &:after {
+        @apply hidden;
+      }
+    }
+  }
+}
+
+.experience-timeline {
+  li {
+    @apply relative;
+
+    .seprator {
+      @apply w-[1px] h-full relative mx-auto mt-2 border-r border-dashed border-primary-400;
+
+      &:after {
+        content: "";
+        transform: translateX(-50%);
+        @apply block absolute top-0 left-1/2 rounded-full;
+      }
+
+      &:after {
+        @apply w-6 h-6 border -top-[5px] border-dashed border-primary-400 bg-[#F8F7F1];
+      }
+
+      >span {
+        transform: translateX(-50%);
+        @apply w-3.5 h-3.5 block absolute top-0 left-1/2 rounded-full bg-primary-500 z-1;
+
+        &:after {
+          content: "";
+          @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75 -z-1
+        }
+      }
+    }
+
+    h5 {
+      @apply font-semibold;
+
+      small {
+        @apply font-normal;
+      }
+    }
+
+    &:nth-child(2) {
+      .seprator {
+
+        >span {
+          @apply bg-red-500;
+
+          &:after {
+            content: "";
+            @apply bg-red-500;
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+
+      h5,
+      p {
+        @apply pb-8
+      }
+    }
+  }
+}
+
+.project-card {
+  background: radial-gradient(ellipse at center, rgba(36, 37, 64, 0.74) 0%, rgba(36, 37, 64, 0.8) 24%, rgba(36, 37, 64, 1) 100%);
+  @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-none overflow-hidden z-1;
+
+  h4 {
+    @apply mb-3 text-red-500 text-2xl font-exo font-semibold text-center;
+    @extend .tracking-out-contract-bck;
+  }
+
+  p {
+    @apply text-yellow-300 text-center leading-normal transition-all duration-700 delay-700 opacity-0 z-1;
+  }
+
+  .tools {
+    @apply flex gap-1 mt-10;
+
+    span {
+      @apply transition-all duration-700 scale-0;
+    }
+  }
+
+  &:hover {
+
+    h4 {
+      @extend .tracking-in-contract-bck;
+    }
+
+    p {
+      @apply opacity-100;
+    }
+
+    .tools {
+      span {
+        @apply scale-100;
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i*200ms;
+          }
+        }
+      }
+    }
+  }
+}
