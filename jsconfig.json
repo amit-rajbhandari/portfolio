@@ -5,7 +5,8 @@
       "@src/*": ["src/*"],
       "@constants/*": ["constants/*"],
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layout/*"]
+      "@layouts/*": ["src/layout/*"],
+      "@svg/*": ["src/svg/*"]
     }
   },
   "exclude": ["node_modules", ".next"]

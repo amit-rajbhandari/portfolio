@@ -39,7 +39,7 @@ const userData = {
     },
     {
       name: "Resimator",
-      desc: `Front-End development for Resimator in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
+      desc: `Front-End development for Resimator in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
       image: "/images/projects/resimator.png",
       tools: ["JQuery", "PHP", "HTML", "SCSS"],
     },

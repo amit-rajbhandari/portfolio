@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { IconBarcode, IconCode, IconExperince, IconPhone } from "@src/svg";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { theme, activeSection, setActiveSection } = props;
+
   return (
-    <footer className="main-footer py-4 bg-gray-50 dark:bg-dark-600">
-      <div className="container flex justify-between items-center mx-auto px-5 text-primary-200 dark:text-slate-200 text-xs">
+    <footer className={`main-footer ${theme}`}>
+      <div className="container hidden xl:flex justify-between items-center mx-auto px-5 text-primary-200 dark:text-slate-200 text-xs">
         <h6 className="flex items-center">
           <Image
             width={50}
@@ -24,6 +28,36 @@ const Footer = () => {
           </span>
         </h6>
       </div>
+
+      <nav className="mobile-nav">
+        <Link href="#services" passHref>
+          <a
+            href="replace"
+            className={`${activeSection === "Services" ? "active" : ""}`}
+            onClick={() => setActiveSection("Services")}
+          >
+            <IconBarcode /> Services
+          </a>
+        </Link>
+        <Link href="#experience" passHref>
+          <a href="replace" onClick={() => setActiveSection("Experience")}>
+            <IconExperince />
+            Experience
+          </a>
+        </Link>
+        <Link href="#projects" passHref>
+          <a href="replace" onClick={() => setActiveSection("Projects")}>
+            <IconCode />
+            Projects
+          </a>
+        </Link>
+        <Link href="#contact" passHref>
+          <a href="replace" onClick={() => setActiveSection("Contact")}>
+            <IconPhone />
+            Contact
+          </a>
+        </Link>
+      </nav>
     </footer>
   );
 };

@@ -3,7 +3,7 @@ import Image from "next/image";
 import StyledLink from "@src/components/styled-link";
 
 const Header = (props) => {
-  const { activeSection = "about", theme, setTheme } = props;
+  const { activeSection, theme, setTheme } = props;
   const [mounted, setMounted] = useState(false);
   // console.log(theme);
   useEffect(() => {
@@ -15,12 +15,14 @@ const Header = (props) => {
       <div className="container flex justify-between items-center mx-auto px-5">
         <h1 className="text-purple-900 dark:text-white text-lg font-medium">
           <Image
-            width={100}
-            height={50}
+            width={window.innerWidth >= 1280 ? 100 : 64}
+            height={window.innerWidth >= 1280 ? 50 : 35}
             src="/images/logo-main.svg"
             alt="Header Logo"
           />
         </h1>
+
+        <h4 className="xl:hidden font-medium">{activeSection}</h4>
 
         <nav className="header-navigation">
           <StyledLink
@@ -44,7 +46,7 @@ const Header = (props) => {
           </StyledLink>
         </nav>
 
-        <div className="w-28 relative group">
+        <div className="xl:w-28 relative group">
           <button
             aria-label="Toggle Dark Mode"
             type="button"
@@ -56,7 +58,7 @@ const Header = (props) => {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 stroke="currentColor"
-                className="w-4 h-4 flex-shrink-0 mr-3 text-yellow-500 dark:text-yellow-500"
+                className="w-4 h-4 flex-shrink-0 xl:mr-3 text-yellow-500 dark:text-yellow-500"
               >
                 {theme === "dark" ? (
                   <path
@@ -75,7 +77,7 @@ const Header = (props) => {
                 )}
               </svg>
             )}
-            Theme
+            <span className="hidden xl:block">Theme</span>
           </button>
 
           <ul className="w-36 hidden absolute top-full right-0 group-hover:block bg-white rounded-lg ring-1 ring-gray-900/10 shadow-lg overflow-hidden py-1 text-sm text-gray-700 font-semibold dark:bg-[#43405F] dark:ring-0 dark:highlight-white/5 dark:text-dark-200">

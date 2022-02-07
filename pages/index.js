@@ -86,7 +86,7 @@ const Home = () => {
 
         <div className="container flex flex-col flex-1 mx-auto px-5 z-1">
           <div className="flex flex-wrap justify-between items-center">
-            <h1 className="text-primary-700 dark:text-slate-200 text-7xl leading-normal">
+            <h1 className="text-primary-700 dark:text-slate-200 text-3xl xl:text-7xl leading-normal">
               Hey There, <br />
               I&apos;m {userData.name}
             </h1>
@@ -100,8 +100,8 @@ const Home = () => {
             </h4>
           </div>
 
-          <div className="flex-1 hidden xl:grid grid-cols-3 relative -z-1">
-            <div className="flex flex-col justify-center space-y-20">
+          <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 relative -z-1">
+            <div className="hidden xl:flex flex-col justify-center space-y-20">
               <h4>
                 Email
                 <Link href={`mailto:${userData.email}`} passHref>
@@ -150,7 +150,7 @@ const Home = () => {
               />
             </figure>
 
-            <div className="flex flex-col items-end justify-center pb-36">
+            <div className="hidden xl:flex flex-col items-end justify-center pb-36">
               <h4 className="mb-5 text-primary-500 dark:text-white text-center">
                 Lets Connect
               </h4>
@@ -178,8 +178,8 @@ const Home = () => {
       <section id="services" className="py-28">
         <div className="container grid grid-cols-1 xl:grid-cols-12">
           <div className="xl:col-start-3 xl:col-end-11">
-            <div className="grid grid-cols-12 gap-20">
-              <div className="col-span-6 space-y-5">
+            <div className="grid grid-cols-12 xl:gap-20">
+              <div className="order-2 xl:order-1 col-span-12 xl:col-span-6 space-y-5">
                 {userData.services.map((service) => {
                   return (
                     <Card
@@ -205,7 +205,7 @@ const Home = () => {
                 })}
               </div>
 
-              <div className="col-span-6 text-slate-700 dark:text-slate-200 leading-loose">
+              <div className="order-1 xl:order-2 col-span-12 xl:col-span-6 mb-7 xl:mb-0 text-slate-700 dark:text-slate-200 leading-loose">
                 <h2 className="mb-10 text-primary-900 dark:text-primary-100 text-5xl text-center">
                   How Do I Help?
                 </h2>
@@ -239,7 +239,7 @@ const Home = () => {
               {userData.experience.map((data) => {
                 return (
                   <li key={data.company} className="grid grid-cols-12 gap-5">
-                    <h5 className="col-span-4 text-lg text-primary-500 dark:text-primary-100">
+                    <h5 className="col-span-12 xl:col-span-4 text-lg text-primary-500 dark:text-primary-100">
                       {data.company}
                       <small className="block">
                         {data.startDate} - {data.endDate}
@@ -248,7 +248,7 @@ const Home = () => {
                     <span className="seprator">
                       <span />
                     </span>
-                    <p className="col-span-7">{data.desc}</p>
+                    <p className="col-span-12 xl:col-span-7">{data.desc}</p>
                   </li>
                 );
               })}
@@ -268,7 +268,7 @@ const Home = () => {
         <Splide options={projectSlideOtion}>
           {userData.project.map((projects) => {
             return (
-              <SplideSlide key={projects.name}>
+              <SplideSlide key={projects.name} className="my-16">
                 <Card
                   classes={{
                     root: "project-card group",
@@ -334,10 +334,10 @@ const Home = () => {
           <div className="xl:col-start-3 xl:col-end-11">
             <Card
               classes={{
-                root: "grid grid-cols-12 gap-20 !py-14 !px-10 bg-aurora-bg bg-cover bg-center !bg-slate-100 dark:!bg-[#43435E]",
+                root: "grid grid-cols-12 xl:gap-20 !py-14 !px-10 bg-aurora-bg bg-cover bg-center !bg-slate-100 dark:!bg-[#43435E]",
               }}
             >
-              <div className="col-span-8">
+              <div className="col-span-12 xl:col-span-8">
                 <h2 className="mb-6 text-primary-500 dark:text-primary-100">
                   Let&apos;s work together on your next project
                 </h2>
@@ -347,7 +347,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="col-span-3 flex flex-col items-center justify-center ">
+              <div className="col-span-12 xl:col-span-3 flex flex-col items-center justify-center ">
                 <h3 className="mb-4">Start by</h3>
                 <StyledLink url="/" isActive>
                   saying hi

@@ -1,0 +1,36 @@
+.main-footer {
+    @apply py-4 bg-gray-50;
+
+    &.dark {
+        @apply bg-dark-600;
+    }
+
+    @include media-breakpoint-down('xl') {
+        box-shadow: 0 -5px 10px 0 rgba($color: #d4e2e2, $alpha: 0.5);
+        @apply w-full h-[4.0625rem] fixed bottom-0 left-0 py-0 z-70;
+    }
+}
+
+.mobile-nav {
+    @apply h-full flex;
+
+    a {
+        flex: 1;
+        @apply flex flex-col justify-center items-center py-4 px-3 text-slate-500 text-xs font-exo font-medium;
+
+        svg {
+            @apply w-6 h-6 mb-1 flex-shrink-0;
+        }
+
+        @include svgColor(#64748b);
+
+        &.active {
+            @apply text-primary-500;
+            @include svgColor(#296f6c);
+        }
+    }
+
+    @include media-breakpoint-up('xl') {
+        @apply hidden;
+    }
+}

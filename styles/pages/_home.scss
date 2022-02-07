@@ -49,8 +49,16 @@
   li {
     @apply relative;
 
+    @include media-breakpoint-down('xl') {
+      @apply pl-8
+    }
+
     .seprator {
       @apply w-[1px] h-full relative mx-auto mt-2 border-r border-dashed border-primary-400;
+
+      @include media-breakpoint-down('xl') {
+        @apply absolute left-2;
+      }
 
       &:after {
         content: "";
@@ -99,15 +107,21 @@
 
       h5,
       p {
-        @apply pb-8
+        @apply pb-8;
+      }
+
+      h5 {
+        @include media-breakpoint-down('xl') {
+          @apply pb-0;
+        }
       }
     }
   }
 }
 
 .project-card {
-  background: radial-gradient(ellipse at center, rgba(36, 37, 64, 0.74) 0%, rgba(36, 37, 64, 0.8) 24%, rgba(36, 37, 64, 1) 100%);
-  @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-none overflow-hidden z-1;
+  background: radial-gradient(ellipse at center, rgba(36, 37, 64, 1) 0%, rgba(36, 37, 64, 1) 24%, rgba(36, 37, 64, 1) 100%);
+  @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-none overflow-hidden transition-all duration-300 z-1;
 
   h4 {
     @apply mb-3 text-red-500 text-2xl font-exo font-semibold text-center;
@@ -116,6 +130,10 @@
 
   p {
     @apply text-yellow-300 text-center leading-normal transition-all duration-700 delay-700 opacity-0 z-1;
+
+    a {
+      @apply inline-block;
+    }
   }
 
   .tools {
@@ -127,6 +145,7 @@
   }
 
   &:hover {
+    @apply rounded-xl shadow-lg shadow-primary-200 scale-125 z-10;
 
     h4 {
       @extend .tracking-in-contract-bck;
