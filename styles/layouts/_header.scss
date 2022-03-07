@@ -14,6 +14,10 @@
   }
 
   &.dark {
+    @include media-breakpoint-down('xl') {
+      @apply border-dark-400 bg-dark-500/90
+    }
+
     .header-navigation {
       a {
         @apply text-slate-400;

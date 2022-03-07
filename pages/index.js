@@ -12,9 +12,9 @@ const Home = () => {
     autoplay: true,
     perPage: 1,
     type: "slide",
-    focus: "center",
-    fixedWidth: 620,
-    gap: "-3px",
+    focus: window.innerWidth >= 1280 ? "center" : "",
+    fixedWidth: window.innerWidth >= 1280 ? 620 : "",
+    gap: window.innerWidth >= 1280 ? "-3px" : "3rem",
     arrows: false,
     pagination: false,
     rewind: true,
@@ -65,7 +65,7 @@ const Home = () => {
 
       <section
         id="about"
-        className="h-[calc(100vh-5rem)] flex relative pt-10 z-1"
+        className="h-[calc(100vh-5rem)] flex relative pt-2 xl:pt-10 z-1"
       >
         <div className="aurora-bg">
           <picture>
@@ -86,7 +86,7 @@ const Home = () => {
 
         <div className="container flex flex-col flex-1 mx-auto px-5 z-1">
           <div className="flex flex-wrap justify-between items-center">
-            <h1 className="text-primary-700 dark:text-slate-200 text-3xl xl:text-7xl leading-normal">
+            <h1 className="mb-5 xl:mb-0 text-primary-700 dark:text-slate-200 text-3xl xl:text-7xl leading-normal">
               Hey There, <br />
               I&apos;m {userData.name}
             </h1>
@@ -268,17 +268,16 @@ const Home = () => {
         <Splide options={projectSlideOtion}>
           {userData.project.map((projects) => {
             return (
-              <SplideSlide key={projects.name} className="my-16">
+              <SplideSlide
+                key={projects.name}
+                className="py-5 xl:py-16 px-5 xl:px-0"
+              >
                 <Card
                   classes={{
                     root: "project-card group",
                   }}
                 >
-                  <Image
-                    src={projects.image}
-                    layout="fill"
-                    className="transition-all duration-1000 -z-1 group-hover:scale-125 group-hover:opacity-25"
-                  />
+                  <Image src={projects.image} layout="fill" />
                   <h4>{projects.name}</h4>
                   {/* eslint-disable-next-line react/no-danger */}
                   <p dangerouslySetInnerHTML={{ __html: projects.desc }} />

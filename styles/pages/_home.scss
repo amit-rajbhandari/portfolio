@@ -121,18 +121,34 @@
 
 .project-card {
   background: radial-gradient(ellipse at center, rgba(36, 37, 64, 1) 0%, rgba(36, 37, 64, 1) 24%, rgba(36, 37, 64, 1) 100%);
-  @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-none overflow-hidden transition-all duration-300 z-1;
+  @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-xl shadow-lg shadow-primary-200 overflow-hidden transition-all duration-300 z-1;
+
+  img {
+    @apply scale-125 opacity-25 transition-all duration-1000 -z-1;
+
+    @include media-breakpoint-up('xl') {
+      @apply scale-100 opacity-100;
+    }
+  }
 
   h4 {
     @apply mb-3 text-red-500 text-2xl font-exo font-semibold text-center;
-    @extend .tracking-out-contract-bck;
+
+    @include media-breakpoint-up('xl') {
+      @apply animate-tracking-out-contract-bck;
+    }
   }
 
+
   p {
-    @apply text-yellow-300 text-center leading-normal transition-all duration-700 delay-700 opacity-0 z-1;
+    @apply hidden text-yellow-300 text-center leading-normal transition-all opacity-0 duration-700 delay-700 z-1;
 
     a {
       @apply inline-block;
+    }
+
+    @include media-breakpoint-up('xl') {
+      @apply block;
     }
   }
 
@@ -140,28 +156,42 @@
     @apply flex gap-1 mt-10;
 
     span {
-      @apply transition-all duration-700 scale-0;
+      @include media-breakpoint-up('xl') {
+        @apply transition-all duration-700 scale-0;
+      }
     }
   }
 
   &:hover {
-    @apply rounded-xl shadow-lg shadow-primary-200 scale-125 z-10;
+    @apply scale-100;
+  }
 
-    h4 {
-      @extend .tracking-in-contract-bck;
-    }
+  @include media-breakpoint-up('xl') {
+    @apply rounded-none shadow-none;
 
-    p {
-      @apply opacity-100;
-    }
+    &:hover {
+      @apply rounded-xl shadow-lg shadow-primary-200 scale-125 z-10;
 
-    .tools {
-      span {
-        @apply scale-100;
+      img {
+        @apply scale-125 opacity-25
+      }
 
-        @for $i from 1 through 20 {
-          &:nth-child(#{$i}) {
-            transition-delay: $i*200ms;
+      h4 {
+        @apply animate-tracking-in-contract-bck;
+      }
+
+      p {
+        @apply opacity-100;
+      }
+
+      .tools {
+        span {
+          @apply scale-100;
+
+          @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+              transition-delay: $i*200ms;
+            }
           }
         }
       }

@@ -74,11 +74,43 @@ module.exports = {
       },
       animation: {
         fadeInTop: "fadeInTop 1s ease-in forwards",
+        "tracking-out-contract-bck":
+          "tracking-out-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both",
+        "tracking-in-contract-bck":
+          "tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both",
       },
       keyframes: {
         fadeInTop: {
           "0%": { opacity: 0, transform: "translateY(50px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        "tracking-out-contract-bck": {
+          "0%": {
+            transform: "translateZ(0)",
+            opacity: 1,
+          },
+          "40%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            "letter-spacing": "1em",
+            transform: " translateZ(400px)",
+            opacity: 0,
+          },
+        },
+        "tracking-in-contract-bck": {
+          "0%": {
+            "letter-spacing": "1em",
+            transform: "translateZ(400px)",
+            opacity: 0,
+          },
+          "40%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            transform: "translateZ(0)",
+            opacity: 1,
+          },
         },
       },
     },
