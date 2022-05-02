@@ -17,6 +17,13 @@ const userData = {
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dolor in nunc placerat faucibus id in nibh. Proin tincidunt vel sapien vel ultrices. Cras eu metus et nibh molestie pellentesque at ut nisi. Integer ut nunc sed tellus sodales efficitur. Curabitur varius malesuada convallis. Sed viverra consectetur massa non elementum.",
     },
     {
+      company: "Volunteer Website Developer @ 'We' for Change",
+      startDate: "Jan 2020",
+      endDate: "Mar 2021",
+      title: "UI/UX & Front-end Developer",
+      desc: "Redesign of 'We' for change organization’s website.",
+    },
+    {
       company: "Innovation Developer Nepal",
       startDate: "Dec 2018",
       endDate: "Current",
@@ -26,10 +33,16 @@ const userData = {
   ],
   project: [
     {
+      name: "The Gurkha Spice",
+      desc: `Front-End development for The Gurkha Spice in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
+      image: "/images/projects/thegurkhaspice.png",
+      tools: ["Wordpress"],
+    },
+    {
       name: "Kiosk Cloud",
       desc: `Front-End development for Kiosk Cloud in corporation with <a href="https://www.resimator.fi/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
       image: "/images/projects/kioskcloud.png",
-      tools: ["JS", "HTML", "SCSS", "Tailwind"],
+      tools: ["JS", "HTML5", "SCSS", "Tailwind"],
     },
     {
       name: "Shangri La Chauffeur",
@@ -38,10 +51,22 @@ const userData = {
       tools: ["React", "React Material", "SCSS"],
     },
     {
+      name: "DNPWC",
+      desc: `Designed DNPWC data entry web platform in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
+      image: "/images/projects/dnpwc.png",
+      tools: ["HTML5", "SCSS"],
+    },
+    {
+      name: "Andelskungen",
+      desc: `React Native App design implmentation and development for Andelskungen.`,
+      image: "/images/projects/andel.jpg",
+      tools: ["React Native", "SCSS"],
+    },
+    {
       name: "Resimator",
-      desc: `Front-End development for Resimator in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
+      desc: `Front-End development for Resimator in corporation with <a href="https://www.resimator.fi/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
       image: "/images/projects/resimator.png",
-      tools: ["JQuery", "PHP", "HTML", "SCSS"],
+      tools: ["JQuery", "PHP", "HTML5", "SCSS"],
     },
     {
       name: "The Nuts Lounge",
@@ -52,7 +77,7 @@ const userData = {
     {
       name: "Th Learning",
       desc: `Front-End development for Th Learning in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
-      image: "/images/projects/wood-couture.png",
+      image: "/images/projects/thlearning.png",
       tools: ["Wordpress"],
     },
     {
@@ -62,16 +87,52 @@ const userData = {
       tools: ["Wordpress"],
     },
     {
+      name: "Hayk",
+      desc: `Hybrid Mobile App design implementation and development for Hayk in corporation with <a href="https://www.resimator.fi" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
+      image: "/images/projects/hayk.jpg",
+      tools: ["Ionic", "Angular", "HTML5", "SCSS"],
+    },
+    {
+      name: "BSSTN",
+      desc: "Bhaktapur Square Space Time Network's web application to manage internal processes such as billing, client management, subscription packages and statistics.",
+      image: "/images/projects/bsstn.jpg",
+      tools: ["HTML5", "CSS3"],
+    },
+    {
+      name: "MIDTOWN GALLERIA",
+      desc: `Front-End development for MIDTOWN GALLERIA in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
+      image: "/images/projects/midtown.png",
+      tools: ["JQuery", "HTML5", "CSS3"],
+    },
+    {
       name: "Sanima Bank",
       desc: `Front-End development for Sanima Bank in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
       image: "/images/projects/sanimabank.png",
-      tools: ["JQuery", "HTML", "CSS"],
+      tools: ["JQuery", "HTML5", "CSS3"],
+    },
+    {
+      name: "SIPRADI Companies",
+      desc: `Front-End development for SIPRADI Companies in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
+      image: "/images/projects/sipradi.png",
+      tools: ["JQuery", "HTML5", "CSS3"],
+    },
+    {
+      name: "Prabasi ko Saath",
+      desc: `Hybrid Mobile App design implementation and development for Prabasi ko Saath in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
+      image: "/images/projects/prabasi.jpg",
+      tools: ["Ionic", "AngularJS", "HTML5", "SCSS"],
+    },
+    {
+      name: "Nabil Invest App",
+      desc: `Hybrid Mobile App design implementation and development for Nabil Invest App in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
+      image: "/images/projects/nabil.jpg",
+      tools: ["Ionic", "AngularJS", "HTML5", "SCSS"],
     },
     {
       name: "Wood Couture",
       desc: `Front-End development for Wood Couture in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
       image: "/images/projects/wood-couture.png",
-      tools: ["JQuery", "HTML", "CSS"],
+      tools: ["JQuery", "HTML5", "CSS3"],
     },
   ],
   socialLinks: [

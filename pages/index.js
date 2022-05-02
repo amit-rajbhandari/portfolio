@@ -121,6 +121,8 @@ const Home = () => {
                             width={40}
                             height={40}
                             src={item.image}
+                            blurDataURL={item.image}
+                            placeholder="blur"
                             alt={item.name}
                           />
                         </a>
@@ -145,6 +147,8 @@ const Home = () => {
             <figure className="h-full relative">
               <Image
                 src={userData.bannerUrl}
+                blurDataURL={userData.bannerUrl}
+                placeholder="blur"
                 alt="Amit Rajbhandari"
                 layout="fill"
               />
@@ -163,6 +167,8 @@ const Home = () => {
                           width={30}
                           height={30}
                           src={item.icon}
+                          blurDataURL={item.icon}
+                          placeholder="blur"
                           alt={item.name}
                         />
                       </a>
@@ -190,6 +196,8 @@ const Home = () => {
                     >
                       <Image
                         src={service.icon}
+                        blurDataURL={service.icon}
+                        placeholder="blur"
                         alt={service.name}
                         width={70}
                         height={70}
@@ -316,6 +324,8 @@ const Home = () => {
                           width={40}
                           height={40}
                           src={item.image}
+                          blurDataURL={item.image}
+                          placeholder="blur"
                           alt={item.name}
                         />
                       </a>

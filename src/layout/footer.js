@@ -14,6 +14,8 @@ const Footer = (props) => {
             width={50}
             height={20}
             src="/images/logo-full.svg"
+            blurDataURL="/images/logo-full.svg"
+            placeholder="blur"
             alt="Header Logo"
           />
           <span className="ml-3 pl-3 border-l border-solid border-primary-500 dark:border-dark-300">

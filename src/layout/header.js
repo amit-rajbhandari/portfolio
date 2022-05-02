@@ -18,6 +18,8 @@ const Header = (props) => {
             width={window.innerWidth >= 1280 ? 100 : 64}
             height={window.innerWidth >= 1280 ? 50 : 35}
             src="/images/logo-main.svg"
+            blurDataURL="/images/logo-main.svg"
+            placeholder="blur"
             alt="Header Logo"
           />
         </h1>
