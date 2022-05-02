@@ -44,7 +44,7 @@ const AnimatedText = (props) => {
       if (!recurrsiveAnim && letterCount === words[0].length + 1) {
         clearInterval(runAnim);
       }
-    }, 120);
+    }, 150);
 
   };
 
