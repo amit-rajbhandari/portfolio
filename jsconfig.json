@@ -5,6 +5,7 @@
       "@src/*": ["src/*"],
       "@constants/*": ["constants/*"],
       "@components/*": ["src/components/*"],
+      "@styled-component/*": ["src/styled-component/*"],
       "@layouts/*": ["src/layout/*"],
       "@svg/*": ["src/svg/*"]
     }

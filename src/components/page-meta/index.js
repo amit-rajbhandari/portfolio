@@ -6,8 +6,8 @@ const PageMeta = ({ children, ...customMeta }) => {
   const router = useRouter();
 
   const meta = {
-    title: "Amit Rajbhandari - Developer, UI/UX",
-    description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
+    title: "Amit Rajbhandari - FrontEnd Developer, UI/UX",
+    description: `FrontEnd Developer with 7 years of experience develoption and slicing. I love fun UI collaboration and making helpful products that connect people.`,
     image: "/avatar.png",
     type: "website",
     ...customMeta,

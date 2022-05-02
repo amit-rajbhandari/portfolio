@@ -154,6 +154,7 @@ const userData = {
   ],
   tools: [
     { name: "React", image: "/images/social/react.svg" },
+    { name: "Next Js", image: "/images/social/nextjs.svg" },
     { name: "Angular", image: "/images/social/angular.svg" },
     { name: "Javascript", image: "/images/social/javascript.svg" },
     { name: "Wordpress", image: "/images/social/wordpress.svg" },

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import StyledLink from "@src/components/styled-link";
+import { StyledLink, StyledImage } from "@src/styled-component";
 
 const Header = (props) => {
   const { activeSection, theme, setTheme } = props;
@@ -14,13 +13,12 @@ const Header = (props) => {
     <header className={`main-header ${theme}`}>
       <div className="container flex justify-between items-center mx-auto px-5">
         <h1 className="text-purple-900 dark:text-white text-lg font-medium">
-          <Image
+          <StyledImage
             width={window.innerWidth >= 1280 ? 100 : 64}
             height={window.innerWidth >= 1280 ? 50 : 35}
-            src="/images/logo-main.svg"
-            blurDataURL="/images/logo-main.svg"
-            placeholder="blur"
+            url="/images/logo-main.svg"
             alt="Header Logo"
+            placeholder=""
           />
         </h1>
 
