@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const AnimatedText = (props) => {
   const { text, color, recurrsiveAnim = false } = props;
 
-  const consoleText = (words, id, colors) => {
+  const animText = (words, id, colors) => {
     const selectedColor = colors === undefined ? ["#fff"] : colors;
     let letterCount = 1;
     let x = 1;
@@ -50,7 +50,7 @@ const AnimatedText = (props) => {
 
   useEffect(() => {
     if (text) {
-      consoleText(text, "text", color);
+      animText(text, "text", color);
     }
   }, [text, color]);
 
