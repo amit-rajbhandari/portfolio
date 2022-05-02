@@ -4,29 +4,39 @@
     &.dark {
         @apply bg-dark-600;
     }
-
-    @include media-breakpoint-down('xl') {
-        box-shadow: 0 -5px 10px 0 rgba($color: #d4e2e2, $alpha: 0.5);
-        @apply w-full h-[4.0625rem] fixed bottom-0 left-0 py-0 z-70;
-    }
 }
 
 .mobile-nav {
-    @apply h-full flex;
+    box-shadow: 0 -5px 10px 0 rgba($color: #d4e2e2, $alpha: 0.5);
+    background: linear-gradient(45deg, rgb(183 213 195 / 75%) 0%, rgba(187, 199, 220, 0.75) 100%);
+    @apply w-full h-[4.0625rem] flex fixed bottom-0 left-0 px-3 rounded-t-3xl backdrop-blur-md z-70;
 
     a {
         flex: 1;
-        @apply flex flex-col justify-center items-center py-4 px-3 text-slate-500 text-xs font-exo font-medium;
+        @apply flex flex-col justify-center items-center py-4 px-3 text-dark-400 text-xs font-exo2 font-medium;
 
         svg {
             @apply w-6 h-6 mb-1 flex-shrink-0;
         }
 
-        @include svgColor(#64748b);
+        @include svgColor(#505166);
 
         &.active {
-            @apply text-primary-500;
-            @include svgColor(#296f6c);
+            @apply relative text-red-500;
+            @include svgColor(#f26440);
+
+            &:before {
+                content: "";
+                @apply w-5 h-0.5 absolute top-0 left-1/2 bg-red-500 -translate-x-1/2
+            }
+        }
+    }
+
+    .logo-hexa {
+        @apply relative -mx-4 translate-y-[-3rem];
+
+        a {
+            @apply p-0
         }
     }
 

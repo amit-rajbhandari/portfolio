@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import Footer from "./footer";
 import Header from "./header";
+import MobileNavigator from "./mobile-navigator";
 
 const Layout = (props) => {
   const { children } = props;
@@ -14,8 +15,9 @@ const Layout = (props) => {
       <main className={`main pt-20 pb-24 xl:pb-0 section-divider ${theme}`}>
         {children}
       </main>
-      <Footer
-        theme={theme}
+      <Footer theme={theme} />
+
+      <MobileNavigator
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />

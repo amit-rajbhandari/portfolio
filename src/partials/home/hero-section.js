@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { StyledImage } from "@src/styled-component";
+import { AnimatedText, StyledImage } from "@src/styled-component";
 
 const HeroSection = (props) => {
   const { userData } = props;
@@ -26,12 +26,16 @@ const HeroSection = (props) => {
         </picture>
       </div>
 
-      <div className="container flex flex-col flex-1 mx-auto px-5 z-1">
-        <div className="flex flex-wrap justify-between items-center">
-          <h1 className="mb-5 xl:mb-0 text-primary-700 dark:text-slate-200 text-3xl xl:text-7xl leading-normal">
-            Hey There, <br />
-            I&apos;m {userData.name}
-          </h1>
+      <div className="container flex flex-col flex-1 px-5 mx-auto z-1">
+        <div className="flex flex-wrap items-center justify-between">
+          <h2 className="w-1/2 h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
+            {/* Hey There, <br />
+            I&apos;m {userData.name} */}
+            <AnimatedText
+              text={[`Hey There, <br /> I&apos;m ${userData.name}`]}
+              color={["#296f6c"]}
+            />
+          </h2>
 
           <h4 className="flex text-5xl font-bold">
             {userData.totalExperience}
@@ -42,18 +46,18 @@ const HeroSection = (props) => {
           </h4>
         </div>
 
-        <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 relative -z-1">
-          <div className="hidden xl:flex flex-col justify-center space-y-20">
+        <div className="relative grid flex-1 grid-cols-1 xl:grid-cols-3 -z-1">
+          <div className="flex-col justify-center hidden space-y-20 xl:flex">
             <h4>
               Email
               <Link href={`mailto:${userData.email}`} passHref>
-                <a href="replace" className="block text-red-500 font-medium">
+                <a href="replace" className="block font-medium text-red-500">
                   {userData.email}
                 </a>
               </Link>
             </h4>
 
-            <figure className="flex flex-wrap m-0 gap-8">
+            <figure className="flex flex-wrap gap-8 m-0">
               {userData.tools.map((item, index) => {
                 return (
                   index <= 9 && (
@@ -85,7 +89,7 @@ const HeroSection = (props) => {
             </figure>
           </div>
 
-          <figure className="h-full relative">
+          <figure className="relative h-full">
             <StyledImage
               url={userData.bannerUrl}
               alt="Amit Rajbhandari"
@@ -93,11 +97,11 @@ const HeroSection = (props) => {
             />
           </figure>
 
-          <div className="hidden xl:flex flex-col items-end justify-center pb-36">
-            <h4 className="mb-5 text-primary-500 dark:text-white text-center">
+          <div className="flex-col items-end justify-center hidden xl:flex pb-36">
+            <h4 className="mb-5 text-center text-primary-500 dark:text-white">
               Lets Connect
             </h4>
-            <figure className="flex flex-wrap m-0 gap-5">
+            <figure className="flex flex-wrap gap-5 m-0">
               {userData.socialLinks.map((item) => {
                 return (
                   <Link key={item.name} href={item.url} passHref>

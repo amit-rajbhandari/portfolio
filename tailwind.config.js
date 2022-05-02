@@ -78,6 +78,7 @@ module.exports = {
           "tracking-out-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both",
         "tracking-in-contract-bck":
           "tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both",
+        cursor: "cursor 1s linear infinite",
       },
       keyframes: {
         fadeInTop: {
@@ -111,6 +112,11 @@ module.exports = {
             transform: "translateZ(0)",
             opacity: 1,
           },
+        },
+        cursor: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0 },
         },
       },
     },
