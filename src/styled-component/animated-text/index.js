@@ -45,14 +45,13 @@ const AnimatedText = (props) => {
         clearInterval(runAnim);
       }
     }, 150);
-
   };
 
   useEffect(() => {
-    if (text) {
+    if(color){
       animText(text, "text", color);
     }
-  }, [text, color]);
+  }, [color]);
 
   return (
     <span className="w-full h-full block absolute top-0 left-0 right-0 bottom-0">

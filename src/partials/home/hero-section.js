@@ -1,9 +1,13 @@
 import React from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { AnimatedText, StyledImage } from "@src/styled-component";
 
 const HeroSection = (props) => {
   const { userData } = props;
+
+  const { theme } = useTheme();
+
   return (
     <section
       id="about"
@@ -28,12 +32,12 @@ const HeroSection = (props) => {
 
       <div className="container flex flex-col flex-1 px-5 mx-auto z-1">
         <div className="flex flex-wrap items-center justify-between">
-          <h2 className="w-1/2 h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
+          <h2 className="w-full xl:w-1/2 h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
             {/* Hey There, <br />
             I&apos;m {userData.name} */}
             <AnimatedText
               text={[`Hey There, <br /> I&apos;m ${userData.name}`]}
-              color={["#296f6c"]}
+              color={[theme === "dark" ? "#ffffff" : "#296f6c"]}
             />
           </h2>
 
