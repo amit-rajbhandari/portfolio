@@ -5,7 +5,7 @@ import "../styles/vendor.scss";
 import "../styles/tailwind.scss";
 import "../styles/main.scss";
 
-function MyApp({ Component, pageProps }) {
+function MyPortfolio({ Component, pageProps }) {
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
 
   return (
@@ -17,6 +17,6 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default dynamic(() => Promise.resolve(MyApp), {
+export default dynamic(() => Promise.resolve(MyPortfolio), {
   ssr: false,
 });
