@@ -138,7 +138,7 @@ const userData = {
   socialLinks: [
     {
       name: "facebook",
-      url: "https://www.facebook.com/",
+      url: "https://www.facebook.com/amit.rajBhandari9802",
       icon: "/images/social/facebook.svg",
     },
     {

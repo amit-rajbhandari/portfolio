@@ -4,6 +4,10 @@
     &.dark {
         @apply bg-dark-600;
     }
+
+    @include media-breakpoint-down('xl') {
+        @apply hidden;
+    }
 }
 
 .mobile-nav {

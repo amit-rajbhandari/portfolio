@@ -11,7 +11,7 @@ const HeroSection = (props) => {
   return (
     <section
       id="about"
-      className="h-[calc(100vh-5rem)] flex relative pt-2 xl:pt-10 z-1"
+      className="h-[80vh] xl:h-[calc(100vh-5rem)] flex relative pt-2 xl:pt-10 z-1"
     >
       <div className="aurora-bg">
         <picture>
@@ -32,11 +32,9 @@ const HeroSection = (props) => {
 
       <div className="container flex flex-col flex-1 px-5 mx-auto z-1">
         <div className="flex flex-wrap items-center justify-between">
-          <h2 className="w-full xl:w-1/2 h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
-            {/* Hey There, <br />
-            I&apos;m {userData.name} */}
+          <h2 className="w-full xl:w-1/2 h-24 xl:h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
             <AnimatedText
-              text={[`Hey There, <br /> I&apos;m ${userData.name}`]}
+              text={[`Hey There, <br /> I'm ${userData.name}`]}
               color={[theme === "dark" ? "#ffffff" : "#296f6c"]}
             />
           </h2>
@@ -109,7 +107,7 @@ const HeroSection = (props) => {
               {userData.socialLinks.map((item) => {
                 return (
                   <Link key={item.name} href={item.url} passHref>
-                    <a href="replace">
+                    <a href="replace" target="_blank">
                       <StyledImage
                         width={30}
                         height={30}

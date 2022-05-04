@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { StyledLink, StyledImage } from "@src/styled-component";
 
 const Header = (props) => {
-  const { activeSection, theme, setTheme } = props;
+  const { theme, setTheme } = props;
   const [mounted, setMounted] = useState(false);
+
   // console.log(theme);
   useEffect(() => {
     setMounted(true);
@@ -22,14 +23,12 @@ const Header = (props) => {
           />
         </h1>
 
-        <h4 className="xl:hidden font-medium">{activeSection}</h4>
+        <h4 className="xl:hidden text-red-500 text-lg font-semibold uppercase">
+          {localStorage.getItem("activeNav")}
+        </h4>
 
         <nav className="header-navigation">
-          <StyledLink
-            classes="mx-6"
-            url="#services"
-            isActive={activeSection === "about"}
-          >
+          <StyledLink classes="mx-6" url="#services">
             Services
           </StyledLink>
 

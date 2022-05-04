@@ -6,7 +6,7 @@ const ServicesSection = (props) => {
   const { userData } = props;
   
   return (
-    <section id="services" className="py-28">
+    <section id="services" className="pt-5 pb-24 xl:py-28">
       <div className="container grid grid-cols-1 xl:grid-cols-12">
         <div className="xl:col-start-3 xl:col-end-11">
           <div className="grid grid-cols-12 xl:gap-20">
@@ -37,7 +37,7 @@ const ServicesSection = (props) => {
             </div>
 
             <div className="order-1 xl:order-2 col-span-12 xl:col-span-6 mb-7 xl:mb-0 text-slate-700 dark:text-slate-200 leading-loose">
-              <h2 className="mb-10 text-primary-900 dark:text-primary-100 text-5xl text-center">
+              <h2 className="mb-10 text-primary-900 dark:text-primary-100 text-3xl xl:text-5xl text-center">
                 How Do I Help?
               </h2>
               <p className="mb-5">

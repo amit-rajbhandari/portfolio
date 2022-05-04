@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import Layout from "@src/layout";
 import userData from "@constants/data";
 import { PageMeta } from "@src/components";
@@ -10,8 +10,15 @@ import {
   ServicesSection,
   ToolsSection,
 } from "@src/partials/home";
+import { MediaBreakpoints } from "@src/configs/breakpoints";
 
 const Home = () => {
+  const windowWidth = window.innerWidth;
+
+  const activeSection = useMemo(() => {
+    return localStorage.getItem("activeNav");
+  }, [localStorage.getItem("activeNav")]);
+
   useEffect(() => {
     window.addEventListener("load", () => {
       // Get all the elements you want to show on scroll
@@ -39,21 +46,34 @@ const Home = () => {
       });
     });
   }, []);
+
   return (
     <>
       <PageMeta />
+      {(windowWidth >= MediaBreakpoints.xl || activeSection === "About") && (
+        <HeroSection userData={userData} />
+      )}
 
-      <HeroSection userData={userData} />
+      {(windowWidth >= MediaBreakpoints.xl || activeSection === "Services") && (
+        <ServicesSection userData={userData} />
+      )}
 
-      <ServicesSection userData={userData} />
+      {(windowWidth >= MediaBreakpoints.xl ||
+        activeSection === "Experience") && (
+        <ExperineceSection userData={userData} />
+      )}
 
-      <ExperineceSection userData={userData} />
+      {(windowWidth >= MediaBreakpoints.xl || activeSection === "Projects") && (
+        <>
+          <ProjectSection userData={userData} />
 
-      <ProjectSection userData={userData} />
+          <ToolsSection userData={userData} />
+        </>
+      )}
 
-      <ToolsSection userData={userData} />
-
-      <ContactSection />
+      {(windowWidth >= MediaBreakpoints.xl || activeSection === "Contact") && (
+        <ContactSection />
+      )}
     </>
   );
 };

@@ -4,10 +4,10 @@ const ExperineceSection = (props) => {
   const { userData } = props;
   
   return (
-    <section id="experience" className="js-show-on-scroll py-28">
+    <section id="experience" className="js-show-on-scroll pt-5 pb-24 xl:py-28">
       <div className="container grid grid-cols-1 xl:grid-cols-12">
         <div className="xl:col-start-3 xl:col-end-11">
-          <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-5xl text-center">
+          <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-3xl xl:text-5xl text-center">
             My Work Experience
           </h2>
 

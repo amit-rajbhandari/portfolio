@@ -19,8 +19,8 @@ const ProjectSection = (props) => {
   };
 
   return (
-    <section id="projects" className="js-show-on-scroll py-28">
-      <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-5xl text-center">
+    <section id="projects" className="js-show-on-scroll py-5 xl:py-28">
+      <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-3xl xl:text-5xl text-center">
         My Latest Works
         <small className="block mt-3 text-sm font-normal">
           Perfect solution for digital experince

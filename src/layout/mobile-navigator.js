@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { IconBarcode, IconCode, IconExperince, IconPhone } from "@src/svg";
 import { StyledImage } from "@src/styled-component";
 
-const MobileNavigator = (props) => {
-  const { activeSection, setActiveSection } = props;
+const MobileNavigator = () => {
+  const [activeSection, setActiveSection] = useState("About");
+
+  const onNavigateView = (view) => {
+    setActiveSection(view);
+  };
+
+  useEffect(() => {
+    if (activeSection) {
+      localStorage.setItem("activeNav", activeSection);
+    }
+  }, [activeSection]);
+
   return (
     <nav className="mobile-nav">
       <Link href="#services" passHref>
         <a
           href="replace"
           className={`${activeSection === "Services" ? "active" : ""}`}
-          onClick={() => setActiveSection("Services")}
+          onClick={() => onNavigateView("Services")}
         >
           <IconBarcode /> Services
         </a>
@@ -21,7 +32,7 @@ const MobileNavigator = (props) => {
         <a
           href="replace"
           className={`${activeSection === "Experience" ? "active" : ""}`}
-          onClick={() => setActiveSection("Experience")}
+          onClick={() => onNavigateView("Experience")}
         >
           <IconExperince />
           Experience
@@ -30,7 +41,7 @@ const MobileNavigator = (props) => {
 
       <span className="logo-hexa">
         <Link href="#about" passHref>
-          <a href="replace" onClick={() => setActiveSection("About")}>
+          <a href="replace" onClick={() => onNavigateView("About")}>
             <StyledImage
               width={120}
               height={120}
@@ -45,7 +56,7 @@ const MobileNavigator = (props) => {
       <Link href="#projects" passHref>
         <a
           href="replace"
-          onClick={() => setActiveSection("Projects")}
+          onClick={() => onNavigateView("Projects")}
           className={`${activeSection === "Projects" ? "active" : ""}`}
         >
           <IconCode />
@@ -57,7 +68,7 @@ const MobileNavigator = (props) => {
         <a
           href="replace"
           className={`${activeSection === "Contact" ? "active" : ""}`}
-          onClick={() => setActiveSection("Contact")}
+          onClick={() => onNavigateView("Contact")}
         >
           <IconPhone />
           Contact

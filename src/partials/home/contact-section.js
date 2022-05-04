@@ -4,7 +4,7 @@ import { StyledLink } from "@src/styled-component";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="js-show-on-scroll py-32 pb-20">
+    <section id="contact" className="js-show-on-scroll py-5 xl:pt-32 xl:pb-20">
       <div className="container grid grid-cols-1 xl:grid-cols-12">
         <div className="xl:col-start-3 xl:col-end-11">
           <Card
