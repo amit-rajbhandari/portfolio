@@ -16,6 +16,9 @@ const ProjectSection = (props) => {
     arrows: false,
     pagination: false,
     rewind: true,
+    breakpoints: {
+      1280: { arrows: true },
+    },
   };
 
   return (

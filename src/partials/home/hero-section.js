@@ -40,10 +40,10 @@ const HeroSection = (props) => {
           </h2>
 
           <h4 className="flex text-5xl font-bold">
-            {userData.totalExperience}
+            <span className="flex items-start">{userData.totalExperience} <small className="-mt-1 ml-1 text-3xl">+</small></span>
             <span className="ml-3 text-base font-medium">
               YEARS <br />
-              EXPERINCE
+              EXPERIENCE
             </span>
           </h4>
         </div>

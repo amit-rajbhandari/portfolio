@@ -72,7 +72,7 @@ const Home = () => {
       )}
 
       {(windowWidth >= MediaBreakpoints.xl || activeSection === "Contact") && (
-        <ContactSection />
+        <ContactSection userData={userData} />
       )}
     </>
   );

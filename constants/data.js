@@ -137,13 +137,18 @@ const userData = {
   ],
   socialLinks: [
     {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/amit-rajbhandari-789aab28",
+      icon: "/images/social/linkedin.svg",
+    },
+    {
       name: "facebook",
       url: "https://www.facebook.com/amit.rajBhandari9802",
       icon: "/images/social/facebook.svg",
     },
     {
       name: "instagram",
-      url: "https://www.instagram.com/",
+      url: "https://www.instagram.com/amit_rajbhandari",
       icon: "/images/social/instagram.svg",
     },
     {

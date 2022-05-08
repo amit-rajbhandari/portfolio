@@ -198,3 +198,9 @@
     }
   }
 }
+
+.splide__arrows {
+  .splide__arrow {
+    @include svgColor(#fff)
+  }
+}
