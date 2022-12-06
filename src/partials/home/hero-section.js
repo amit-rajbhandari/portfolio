@@ -6,7 +6,7 @@ import { AnimatedText, StyledImage } from "@src/styled-component";
 const HeroSection = (props) => {
   const { userData } = props;
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <section
@@ -35,7 +35,7 @@ const HeroSection = (props) => {
           <h2 className="w-full xl:w-1/2 h-24 xl:h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
             <AnimatedText
               text={[`Hey There, <br /> I'm ${userData.name}`]}
-              color={[theme === "dark" ? "#ffffff" : "#296f6c"]}
+              color={[resolvedTheme === "dark" ? "#ffffff" : "#296f6c"]}
             />
           </h2>
 
