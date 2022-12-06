@@ -9,11 +9,10 @@
     "check-lint": "eslint .",
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run build",
-    "postinstall": "husky install",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@splidejs/react-splide": "^0.6.20",
+    "@splidejs/react-splide": "^0.7.12",
     "next": "12.1.5",
     "next-themes": "^0.0.15",
     "react": "18.2.0",
