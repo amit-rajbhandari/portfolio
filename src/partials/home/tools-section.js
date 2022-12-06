@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import {  StyledImage } from "@src/styled-component";
+import { StyledImage } from "@src/styled-component";
 
 const ToolsSection = (props) => {
   const { userData } = props;
@@ -26,19 +26,17 @@ const ToolsSection = (props) => {
             return (
               <SplideSlide key={item.name}>
                 <figure className="flex">
-                  <Link href="/" passHref>
-                    <a
-                      href="replace"
-                      className="transition-all duration-500 hover:rotate-[360deg]"
-                    >
-                      <StyledImage
-                        width={40}
-                        height={40}
-                        url={item.image}
-                        alt={item.name}
-                        placeholder=""
-                      />
-                    </a>
+                  <Link
+                    href="/"
+                    className="transition-all duration-500 hover:rotate-[360deg]"
+                  >
+                    <StyledImage
+                      width={40}
+                      height={40}
+                      url={item.image}
+                      alt={item.name}
+                      placeholder=""
+                    />
                   </Link>
                 </figure>
               </SplideSlide>

@@ -40,7 +40,10 @@ const HeroSection = (props) => {
           </h2>
 
           <h4 className="flex text-5xl font-bold">
-            <span className="flex items-start">{userData.totalExperience} <small className="-mt-1 ml-1 text-3xl">+</small></span>
+            <span className="flex items-start">
+              {userData.totalExperience}{" "}
+              <small className="-mt-1 ml-1 text-3xl">+</small>
+            </span>
             <span className="ml-3 text-base font-medium">
               YEARS <br />
               EXPERIENCE
@@ -52,10 +55,11 @@ const HeroSection = (props) => {
           <div className="flex-col justify-center hidden space-y-20 xl:flex">
             <h4>
               Email
-              <Link href={`mailto:${userData.email}`} passHref>
-                <a href="replace" className="block font-medium text-red-500">
-                  {userData.email}
-                </a>
+              <Link
+                href={`mailto:${userData.email}`}
+                className="block font-medium text-red-500"
+              >
+                {userData.email}
               </Link>
             </h4>
 
@@ -63,30 +67,27 @@ const HeroSection = (props) => {
               {userData.tools.map((item, index) => {
                 return (
                   index <= 9 && (
-                    <Link key={item.name} href="/" passHref>
-                      <a href="replace">
-                        <StyledImage
-                          width={40}
-                          height={40}
-                          url={item.image}
-                          alt={item.name}
-                          placeholder=""
-                        />
-                      </a>
+                    <Link key={item.name} href="/">
+                      <StyledImage
+                        width={40}
+                        height={40}
+                        url={item.image}
+                        alt={item.name}
+                        placeholder=""
+                      />
                     </Link>
                   )
                 );
               })}
-              <Link href="#more-tools" passHref>
-                <a
-                  href="replace"
-                  className="group flex items-center justify-center self-start relative px-2 text-red-500 text-[2rem] font-semibold leading-none z-1 before:w-full before:h-3.5 before:content-[''] before:absolute before:-bottom-0.5 before:left-0 before:rounded before:shadow-lg before:shadow-yellow-500 before:bg-yellow-500 before:-z-1"
-                >
-                  <span className="font-normal group-hover:animate-bounce">
-                    +
-                  </span>{" "}
-                  {userData.tools.length - 9}
-                </a>
+              <Link
+                href="#more-tools"
+                passHref
+                className="group flex items-center justify-center self-start relative px-2 text-red-500 text-[2rem] font-semibold leading-none z-1 before:w-full before:h-3.5 before:content-[''] before:absolute before:-bottom-0.5 before:left-0 before:rounded before:shadow-lg before:shadow-yellow-500 before:bg-yellow-500 before:-z-1"
+              >
+                <span className="font-normal group-hover:animate-bounce">
+                  +
+                </span>{" "}
+                {userData.tools.length - 9}
               </Link>
             </figure>
           </div>
@@ -106,16 +107,14 @@ const HeroSection = (props) => {
             <figure className="flex flex-wrap gap-5 m-0">
               {userData.socialLinks.map((item) => {
                 return (
-                  <Link key={item.name} href={item.url} passHref>
-                    <a href="replace" target="_blank">
-                      <StyledImage
-                        width={30}
-                        height={30}
-                        url={item.icon}
-                        alt={item.name}
-                        placeholder=""
-                      />
-                    </a>
+                  <Link key={item.name} href={item.url} target="_blank">
+                    <StyledImage
+                      width={30}
+                      height={30}
+                      url={item.icon}
+                      alt={item.name}
+                      placeholder=""
+                    />
                   </Link>
                 );
               })}
