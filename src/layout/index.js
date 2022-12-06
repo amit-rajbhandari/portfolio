@@ -6,15 +6,15 @@ import MobileNavigator from "./mobile-navigator";
 
 const Layout = (props) => {
   const { children } = props;
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <>
-      <Header theme={theme} setTheme={setTheme} />
-      <main className={`main pt-20 section-divider ${theme}`}>
+      <Header theme={resolvedTheme} setTheme={setTheme} />
+      <main className={`main pt-20 section-divider ${resolvedTheme}`}>
         {children}
       </main>
-      <Footer theme={theme} />
+      <Footer theme={resolvedTheme} />
 
       <MobileNavigator />
     </>

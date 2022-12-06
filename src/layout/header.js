@@ -5,7 +5,6 @@ const Header = (props) => {
   const { theme, setTheme } = props;
   const [mounted, setMounted] = useState(false);
 
-  // console.log(theme);
   useEffect(() => {
     setMounted(true);
   }, []);
