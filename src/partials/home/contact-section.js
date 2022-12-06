@@ -41,16 +41,14 @@ const ContactSection = (props) => {
           <figure className="flex justify-center flex-wrap gap-5 m-0">
             {userData.socialLinks.map((item) => {
               return (
-                <Link key={item.name} href={item.url} passHref>
-                  <a href="replace" target="_blank">
-                    <StyledImage
-                      width={30}
-                      height={30}
-                      url={item.icon}
-                      alt={item.name}
-                      placeholder=""
-                    />
-                  </a>
+                <Link key={item.name} href={item.url} target="_blank">
+                  <StyledImage
+                    width={30}
+                    height={30}
+                    url={item.icon}
+                    alt={item.name}
+                    placeholder=""
+                  />
                 </Link>
               );
             })}

@@ -12,16 +12,14 @@ const hover = "hover:text-red-500 hover:before:w-1/2 hover:after:w-1/2";
 const StyledLink = (props) => {
   const { url, isActive, classes, children, ...others } = props;
   return (
-    <Link href={url} passHref>
-      <a
-        href="replace"
-        className={`inline-flex justify-center items-center relative px-4 rounded-3xl font-medium transition-all duration-700 ${before} ${after} ${hover}
-        ${isActive ? activeStyle : ""}
-        ${classes || ""}`}
-        {...others}
-      >
-        {children}
-      </a>
+    <Link
+      href={url}
+      className={`inline-flex justify-center items-center relative px-4 rounded-3xl font-medium transition-all duration-700 ${before} ${after} ${hover}
+    ${isActive ? activeStyle : ""}
+    ${classes || ""}`}
+      {...others}
+    >
+      {children}
     </Link>
   );
 };

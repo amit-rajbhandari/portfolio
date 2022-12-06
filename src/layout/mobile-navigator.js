@@ -18,61 +18,51 @@ const MobileNavigator = () => {
 
   return (
     <nav className="mobile-nav">
-      <Link href="#services" passHref>
-        <a
-          href="replace"
-          className={`${activeSection === "Services" ? "active" : ""}`}
-          onClick={() => onNavigateView("Services")}
-        >
-          <IconBarcode /> Services
-        </a>
+      <Link
+        href="#services"
+        className={`${activeSection === "Services" ? "active" : ""}`}
+        onClick={() => onNavigateView("Services")}
+      >
+        <IconBarcode /> Services
       </Link>
 
-      <Link href="#experience" passHref>
-        <a
-          href="replace"
-          className={`${activeSection === "Experience" ? "active" : ""}`}
-          onClick={() => onNavigateView("Experience")}
-        >
-          <IconExperince />
-          Experience
-        </a>
+      <Link
+        href="#experience"
+        className={`${activeSection === "Experience" ? "active" : ""}`}
+        onClick={() => onNavigateView("Experience")}
+      >
+        <IconExperince />
+        Experience
       </Link>
 
       <span className="logo-hexa">
-        <Link href="#about" passHref>
-          <a href="replace" onClick={() => onNavigateView("About")}>
-            <StyledImage
-              width={120}
-              height={120}
-              url="/images/hexa-logo.svg"
-              alt="Hexa Logo"
-              placeholder=""
-            />
-          </a>
+        <Link href="#about" onClick={() => onNavigateView("About")}>
+          <StyledImage
+            width={120}
+            height={120}
+            url="/images/hexa-logo.svg"
+            alt="Hexa Logo"
+            placeholder=""
+          />
         </Link>
       </span>
 
-      <Link href="#projects" passHref>
-        <a
-          href="replace"
-          onClick={() => onNavigateView("Projects")}
-          className={`${activeSection === "Projects" ? "active" : ""}`}
-        >
-          <IconCode />
-          Projects
-        </a>
+      <Link
+        href="#projects"
+        onClick={() => onNavigateView("Projects")}
+        className={`${activeSection === "Projects" ? "active" : ""}`}
+      >
+        <IconCode />
+        Projects
       </Link>
 
-      <Link href="#contact" passHref>
-        <a
-          href="replace"
-          className={`${activeSection === "Contact" ? "active" : ""}`}
-          onClick={() => onNavigateView("Contact")}
-        >
-          <IconPhone />
-          Contact
-        </a>
+      <Link
+        href="#contact"
+        className={`${activeSection === "Contact" ? "active" : ""}`}
+        onClick={() => onNavigateView("Contact")}
+      >
+        <IconPhone />
+        Contact
       </Link>
     </nav>
   );
