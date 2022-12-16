@@ -82,11 +82,11 @@ const userData = {
     },
     {
       name: "Resimator",
-      tagline: "",
-      content: "-",
+      tagline: "TOGETHER, we create SOLUTIONS to accelerate GROWTH",
+      content: "We believe in disruption and digital innovation of today’s business. We have seen how pandemic like Covid-19 triggered several businesses to adapt to faster digitalisation.",
       desc: `Front-End development for Resimator in corporation with <a href="https://www.resimator.fi/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
       image: "/images/projects/resimator.png",
-      url: "",
+      url: "https://resimator.fi",
       tools: ["JQuery", "PHP", "HTML5", "SCSS"],
     },
     {
