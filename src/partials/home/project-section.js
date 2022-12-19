@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Card } from "@src/components";
 import { StyledImage } from "@src/styled-component";
+import ProjectOffCanvas from "./project-offcanvas";
 
 const ProjectSection = (props) => {
   const { userData } = props;
+
+  const [showDetail, setShowDetail] = useState();
 
   const projectSlideOtion = {
     autoplay: true,
@@ -39,8 +42,9 @@ const ProjectSection = (props) => {
             >
               <Card
                 classes={{
-                  root: "project-card group",
+                  root: "project-card group cursor-pointer",
                 }}
+                onClick={() => setShowDetail(projects)}
               >
                 <StyledImage
                   url={projects.image}
@@ -67,6 +71,13 @@ const ProjectSection = (props) => {
           );
         })}
       </Splide>
+
+      {showDetail && (
+        <ProjectOffCanvas
+          data={showDetail}
+          handleOnClose={() => setShowDetail(null)}
+        />
+      )}
     </section>
   );
 };

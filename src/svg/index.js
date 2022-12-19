@@ -1,4 +1,6 @@
-export { default as IconCode } from "./icon-code";
-export { default as IconPhone } from "./icon-phone";
-export { default as IconBarcode } from "./icon-barcode";
-export { default as IconExperince } from "./icon-experince";
+export { default as IconCode } from "./IconCode";
+export { default as IconPhone } from "./IconPhone";
+export { default as IconBarcode } from "./IconBarcode";
+export { default as IconExperince } from "./IconExperince";
+export { default as IconAngleLeft } from "./IconAngleLeft";
+export { default as IconOpenLink } from "./IconOpenLink";

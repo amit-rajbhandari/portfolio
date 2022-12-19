@@ -27,7 +27,7 @@ const ContactSection = (props) => {
 
             <div className="col-span-12 xl:col-span-3 flex flex-col items-center justify-center ">
               <h3 className="mb-4">Start by</h3>
-              <StyledLink url="mailto:amit.fist@gmail.com" isActive>
+              <StyledLink url={`mailto:${userData.email}`} isActive>
                 saying hi
               </StyledLink>
             </div>

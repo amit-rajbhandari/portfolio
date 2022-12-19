@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 export const MediaBreakpoints = {
   sm: 640,
   md: 768,
