@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import dynamic from "next/dynamic";
 import { ThemeProvider } from "next-themes";
 import "../styles/vendor.scss";
@@ -12,6 +13,7 @@ function MyPortfolio({ Component, pageProps }) {
     <ThemeProvider enableSystem defaultTheme="system" attribute="class">
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </ThemeProvider>
   );
