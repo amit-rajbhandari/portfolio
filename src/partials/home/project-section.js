@@ -42,7 +42,7 @@ const ProjectSection = (props) => {
             >
               <Card
                 classes={{
-                  root: "project-card group",
+                  root: "project-card group cursor-pointer",
                 }}
                 onClick={() => setShowDetail(projects)}
               >

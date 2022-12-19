@@ -56,16 +56,20 @@ const ProjectOffCanvas = (props) => {
           </div>
 
           <h5 className="font-semibold text-lg mt-6 mb-2">Webiste</h5>
-          <Link
-            className="text-red-500 underline"
-            href={data.url || "#"}
-            target="_blank"
-          >
-            {data.url}
-          </Link>
+          {data.status !== "live" ? (
+            <p>{data.status}</p>
+          ) : (
+            <Link
+              className="text-red-500 underline"
+              href={data.url || "#"}
+              target="_blank"
+            >
+              {data.url}
+            </Link>
+          )}
         </main>
 
-        {data.url && (
+        {data.url && data.status !== "expired" && (
           <footer className="sticky bottom-0">
             <Link
               className="w-full h-20 flex items-center justify-center text-center bg-slate-800 text-white gap-2"

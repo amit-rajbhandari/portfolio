@@ -20,7 +20,7 @@ const BackDrop = ({ classes, ...props }) => {
 
   return reactDom.createPortal(
     <div
-      className={`w-full h-full fixed top-0 left-0 z-40 bg-dark-500/90 backdrop-blur-sm 
+      className={`w-full h-full fixed top-0 left-0 z-[71] bg-dark-500/90 backdrop-blur-sm 
       ${classes || ""}`}
       {...props}
     />,

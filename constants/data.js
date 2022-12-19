@@ -14,24 +14,45 @@ const userData = {
       startDate: "Oct 2015",
       endDate: "Dec 2018",
       title: "Front-end Developer",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dolor in nunc placerat faucibus id in nibh. Proin tincidunt vel sapien vel ultrices. Cras eu metus et nibh molestie pellentesque at ut nisi. Integer ut nunc sed tellus sodales efficitur. Curabitur varius malesuada convallis. Sed viverra consectetur massa non elementum.",
+      desc: "Started my journey as a PHP intern and climbed up to learning HTML, CSS, and Javascript. Worked on numerous projects with different kinds of frameworks like Angular, Svelte, and Ionic. It was a great journey at the company and as a startup of my career I progressed a lot being here.",
     },
     {
       company: "Volunteer Website Developer @ 'We' for Change",
       startDate: "Jan 2020",
       endDate: "Mar 2021",
       title: "UI/UX & Front-end Developer",
-      desc: "Redesign of 'We' for change organization’s website.",
+      desc: "Starting with the redesign of the organization’s website in WordPress to working with the project Let’s Meditate until the completion of the project it was really professional and fun working with the management team of 'We' For Change.",
     },
     {
-      company: "Innovation Developer Nepal",
+      company: "Resimator.fi",
       startDate: "Dec 2018",
       endDate: "Current",
       title: "UI/UX & Front-end Developer",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dolor in nunc placerat faucibus id in nibh. Proin tincidunt vel sapien vel ultrices. Cras eu metus et nibh molestie pellentesque at ut nisi. Integer ut nunc sed tellus sodales efficitur. Curabitur varius malesuada convallis. Sed viverra consectetur massa non elementum.",
+      desc: "Coming from the field of UI/UX. I started my journey at Resimator as a Front-end and UI/UX developer, which was a new opportunity to add another skill to my CV, learned a lot of new frameworks, and worked on various projects and still looking forward to leveling up in future with more skills and projects.",
     },
   ],
   project: [
+    {
+      name: "Bridge Inspection Engineers",
+      tagline: "WE SPECIALIZE IN STRUCTURE INSPECTION & ASSET MANAGEMENT",
+      content: "",
+      desc: `Front-End development for Bridge Inspection Engineers in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
+      image: "/images/projects/bridge-inspection.png",
+      url: "",
+      tools: ["Wordpress"],
+      status: "Coming Soon",
+    },
+    {
+      name: "Sierra Homes",
+      tagline: "Our Heart Is In Your Home...",
+      content:
+        "“It All Begins With A Good Foundation”.“Home Is Where Your Heart Is...” From finding the perfect block of land to designing your dream home, the Sierra Homes building process is designed to give you the tools and flexibility to create a home that is an expression of you.",
+      desc: `Front-End development for Sierra Homes in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
+      image: "/images/projects/sierra-homes.png",
+      url: "",
+      tools: ["Wordpress"],
+      status: "Coming Soon",
+    },
     {
       name: "The Gurkha Spice",
       tagline:
@@ -42,6 +63,7 @@ const userData = {
       image: "/images/projects/thegurkhaspice.png",
       url: "https://thegurkhaspice.com.au",
       tools: ["Wordpress"],
+      status: "live",
     },
     {
       name: "Kiosk Cloud",
@@ -51,6 +73,7 @@ const userData = {
       image: "/images/projects/kioskcloud.png",
       url: "https://kioskcloud.io",
       tools: ["JS", "HTML5", "SCSS", "Tailwind"],
+      status: "live",
     },
     {
       name: "Shangri La Chauffeur",
@@ -61,6 +84,7 @@ const userData = {
       image: "/images/projects/shangrila.png",
       url: "https://shangrilachauffeurs.com.au",
       tools: ["React", "React Material", "SCSS"],
+      status: "live",
     },
     {
       name: "DNPWC",
@@ -70,6 +94,7 @@ const userData = {
       image: "/images/projects/dnpwc.png",
       url: "",
       tools: ["HTML5", "SCSS"],
+      status: "live",
     },
     {
       name: "Andelskungen",
@@ -79,6 +104,7 @@ const userData = {
       image: "/images/projects/andel.jpg",
       url: "",
       tools: ["React Native", "SCSS"],
+      status: "live",
     },
     {
       name: "Resimator",
@@ -89,6 +115,7 @@ const userData = {
       image: "/images/projects/resimator.png",
       url: "https://resimator.fi",
       tools: ["JQuery", "PHP", "HTML5", "SCSS"],
+      status: "live",
     },
     {
       name: "Karnali Province Sports",
@@ -99,6 +126,7 @@ const userData = {
       image: "/images/projects/karnali-sports.png",
       url: "https://sports.karnali.gov.np",
       tools: ["JQuery", "PHP", "HTML5", "SCSS"],
+      status: "live",
     },
     {
       name: "The Nuts Lounge",
@@ -109,6 +137,7 @@ const userData = {
       image: "/images/projects/thenutslounge.png",
       url: "https://thenutslounge.com.au",
       tools: ["Wordpress"],
+      status: "live",
     },
     {
       name: "Th Learning",
@@ -120,6 +149,7 @@ const userData = {
       image: "/images/projects/thlearning.png",
       url: "https://thlearning.edu.au",
       tools: ["Wordpress"],
+      status: "live",
     },
     {
       name: "We For Change",
@@ -130,6 +160,7 @@ const userData = {
       image: "/images/projects/weforchange.png",
       url: "https://www.weforchange.org",
       tools: ["Wordpress"],
+      status: "live",
     },
     {
       name: "Hayk",
@@ -139,6 +170,7 @@ const userData = {
       image: "/images/projects/hayk.jpg",
       url: "",
       tools: ["Ionic", "Angular", "HTML5", "SCSS"],
+      status: "Expired",
     },
     {
       name: "BSSTN",
@@ -149,6 +181,7 @@ const userData = {
       image: "/images/projects/bsstn.jpg",
       url: "-",
       tools: ["HTML5", "CSS3"],
+      status: "Expired",
     },
     {
       name: "MIDTOWN GALLERIA",
@@ -159,6 +192,7 @@ const userData = {
       image: "/images/projects/midtown.png",
       url: "https://www.midtown.com.np/",
       tools: ["JQuery", "HTML5", "CSS3"],
+      status: "live",
     },
     {
       name: "SIPRADI Companies",
@@ -169,6 +203,7 @@ const userData = {
       image: "/images/projects/sipradi.png",
       url: "https://www.sipradi.com.np/",
       tools: ["JQuery", "HTML5", "CSS3"],
+      status: "live",
     },
     {
       name: "Prabasi ko Saath",
@@ -179,6 +214,7 @@ const userData = {
       image: "/images/projects/prabasi.jpg",
       url: "http://www.prabasikosath.com/",
       tools: ["Ionic", "AngularJS", "HTML5", "SCSS"],
+      status: "live",
     },
     {
       name: "Nabil Invest App",
@@ -187,7 +223,9 @@ const userData = {
         "Nabil Invest App is a convenient way to keep track of your investments. Now keep the share market in your pocket. This app gives access to details regarding Nabil Invest DEMAT status, PMS, Today’s Share, Mutual Fund",
       desc: `Hybrid Mobile App design implementation and development for Nabil Invest App in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
       image: "/images/projects/nabil.jpg",
+      url: "https://play.google.com/store/apps/details?id=com.mobile.nabilinvestmentdemat&hl=en&gl=US",
       tools: ["Ionic", "AngularJS", "HTML5", "SCSS"],
+      status: "live",
     },
     {
       name: "Wood Couture",
@@ -198,6 +236,7 @@ const userData = {
       image: "/images/projects/wood-couture.png",
       url: "https://www.woodcouture.sg",
       tools: ["JQuery", "HTML5", "CSS3"],
+      status: "live",
     },
   ],
   socialLinks: [
@@ -243,19 +282,19 @@ const userData = {
   resumeUrl: "",
   services: [
     {
-      name: "Web Development",
+      name: "Website Development",
       icon: "/images/icons/icon-web-dev.svg",
-      total: 42,
+      total: 22,
     },
     {
-      name: "Mobile App Development",
+      name: "Mobile App Development (Hybrid/React Native)",
       icon: "/images/icons/icon-mobile-dev.svg",
-      total: 10,
+      total: 5,
     },
     {
       name: "Web App Development",
       icon: "/images/icons/icon-web-app-dev.svg",
-      total: 15,
+      total: 10,
     },
   ],
 };

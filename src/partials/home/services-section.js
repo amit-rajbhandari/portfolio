@@ -1,10 +1,11 @@
+import React from "react";
+import Link from "next/link";
 import { Card } from "@src/components";
 import { StyledImage } from "@src/styled-component";
-import React from "react";
 
 const ServicesSection = (props) => {
   const { userData } = props;
-  
+
   return (
     <section id="services" className="pt-5 pb-24 xl:py-28">
       <div className="container grid grid-cols-1 xl:grid-cols-12">
@@ -19,12 +20,14 @@ const ServicesSection = (props) => {
                       root: "flex items-center gap-8 transition-all hover:shadow-lg",
                     }}
                   >
-                    <StyledImage
-                      width={70}
-                      height={70}
-                      url={service.icon}
-                      alt={service.name}
-                    />
+                    <figure className="flex-shrink-0">
+                      <StyledImage
+                        width={70}
+                        height={70}
+                        url={service.icon}
+                        alt={service.name}
+                      />
+                    </figure>
                     <h4 className="text-primary-700 dark:text-primary-100 text-lg font-exo font-semibold">
                       {service.name}
                       <small className="block text-slate-400 dark:text-slate-100 text-sm font-exo2 font-medium">
@@ -48,10 +51,16 @@ const ServicesSection = (props) => {
                 devices.
               </p>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Asperiores assumenda nihil consequatur libero quidem eaque odio
-                laborum repellat mollitia illum eius veniam velit distinctio
-                veritatis et, eveniet commodi sit eum.
+                Frontend developer, UX architect, Gamer and Music lover in
+                search of flow. Working with my hands to make magic happen on
+                the internet. View my Projects, Resume, Contact Me, or send me
+                an email at
+                <Link
+                  href={`mailto:${userData.email}`}
+                  className="block font-medium text-red-500"
+                >
+                  {userData.email}.
+                </Link>
               </p>
             </div>
           </div>
