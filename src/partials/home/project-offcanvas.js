@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { IconAngleLeft, IconOpenLink } from "@src/svg";
 import BackDrop from "@src/components/backdrop";
 import { StyledImage } from "@src/styled-component";
@@ -8,16 +7,13 @@ import { StyledImage } from "@src/styled-component";
 const ProjectOffCanvas = (props) => {
   const { data, handleOnClose } = props;
 
-  const { resolvedTheme } = useTheme();
-
   return (
     <>
-      <aside className="h-[100vh] flex flex-col bg-white dark:bg-dark-600 fixed top-0 right-0 max-w-full w-[544px] z-50 shadow-xl">
+      <aside className="h-[100vh] flex flex-col bg-white dark:bg-dark-600 fixed top-0 right-0 max-w-full w-[544px] z-[75] shadow-xl">
         <header className="pb-3 pt-7 border-b border-solid border-slate-300 mx-7">
           <button
             type="button"
-            className={`bg-transparent border-0 flex items-center gap-2 
-            ${resolvedTheme === "dark" ? "fill-white" : ""}`}
+            className="bg-transparent border-0 flex items-center gap-2 dark:fill-white hover:text-red-500 hover:!fill-red-500"
             onClick={() => handleOnClose()}
           >
             <IconAngleLeft />

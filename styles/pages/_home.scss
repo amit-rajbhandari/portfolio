@@ -13,8 +13,7 @@
 }
 
 .section-divider {
-
-  >section {
+  > section {
     @apply relative;
 
     &:before {
@@ -36,7 +35,6 @@
     }
 
     &:last-child {
-
       &:before,
       &:after {
         @apply hidden;
@@ -49,14 +47,14 @@
   li {
     @apply relative;
 
-    @include media-breakpoint-down('xl') {
-      @apply pl-8
+    @include media-breakpoint-down("xl") {
+      @apply pl-8;
     }
 
     .seprator {
       @apply w-[1px] h-full relative mx-auto mt-2 border-r border-dashed border-primary-400;
 
-      @include media-breakpoint-down('xl') {
+      @include media-breakpoint-down("xl") {
         @apply absolute left-2;
       }
 
@@ -70,13 +68,13 @@
         @apply w-6 h-6 border -top-[5px] border-dashed border-primary-400 bg-[#F8F7F1];
       }
 
-      >span {
+      > span {
         transform: translateX(-50%);
         @apply w-3.5 h-3.5 block absolute top-0 left-1/2 rounded-full bg-primary-500 z-1;
 
         &:after {
           content: "";
-          @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75 -z-1
+          @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75 -z-1;
         }
       }
     }
@@ -91,8 +89,7 @@
 
     &:nth-child(2) {
       .seprator {
-
-        >span {
+        > span {
           @apply bg-red-500;
 
           &:after {
@@ -104,14 +101,13 @@
     }
 
     &:not(:last-child) {
-
       h5,
       p {
         @apply pb-8;
       }
 
       h5 {
-        @include media-breakpoint-down('xl') {
+        @include media-breakpoint-down("xl") {
           @apply pb-0;
         }
       }
@@ -120,13 +116,18 @@
 }
 
 .project-card {
-  background: radial-gradient(ellipse at center, rgba(36, 37, 64, 1) 0%, rgba(36, 37, 64, 1) 24%, rgba(36, 37, 64, 1) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(36, 37, 64, 1) 0%,
+    rgba(36, 37, 64, 1) 24%,
+    rgba(36, 37, 64, 1) 100%
+  );
   @apply aspect-[16/9] flex flex-col items-center justify-center relative border-none rounded-xl shadow-lg shadow-primary-200 overflow-hidden transition-all duration-300 z-1;
 
   img {
     @apply scale-125 opacity-25 transition-all duration-1000 -z-1;
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
       @apply scale-100 opacity-100;
     }
   }
@@ -134,11 +135,10 @@
   h4 {
     @apply mb-3 text-red-500 text-2xl font-exo font-semibold text-center;
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
       @apply animate-tracking-out-contract-bck;
     }
   }
-
 
   p {
     @apply hidden text-yellow-300 text-center leading-normal transition-all opacity-0 duration-700 delay-700 z-1;
@@ -147,7 +147,7 @@
       @apply inline-block;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
       @apply block;
     }
   }
@@ -156,7 +156,7 @@
     @apply flex gap-1 mt-10;
 
     span {
-      @include media-breakpoint-up('xl') {
+      @include media-breakpoint-up("xl") {
         @apply transition-all duration-700 scale-0;
       }
     }
@@ -166,14 +166,16 @@
     @apply scale-100;
   }
 
-  @include media-breakpoint-up('xl') {
+  @include media-breakpoint-up("xl") {
     @apply rounded-none shadow-none;
 
     &:hover {
-      @apply rounded-xl shadow-lg shadow-primary-200 scale-125 z-10;
+      transform: scale(1.2);
+
+      @apply rounded-xl shadow-lg shadow-primary-200 z-10;
 
       img {
-        @apply scale-125 opacity-25
+        @apply scale-125 opacity-25;
       }
 
       h4 {
@@ -190,7 +192,7 @@
 
           @for $i from 1 through 20 {
             &:nth-child(#{$i}) {
-              transition-delay: $i*200ms;
+              transition-delay: $i * 200ms;
             }
           }
         }
@@ -201,6 +203,6 @@
 
 .splide__arrows {
   .splide__arrow {
-    @include svgColor(#fff)
+    @include svgColor(#fff);
   }
 }

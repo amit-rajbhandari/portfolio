@@ -83,19 +83,31 @@ const userData = {
     {
       name: "Resimator",
       tagline: "TOGETHER, we create SOLUTIONS to accelerate GROWTH",
-      content: "We believe in disruption and digital innovation of today’s business. We have seen how pandemic like Covid-19 triggered several businesses to adapt to faster digitalisation.",
+      content:
+        "We believe in disruption and digital innovation of today’s business. We have seen how pandemic like Covid-19 triggered several businesses to adapt to faster digitalisation.",
       desc: `Front-End development for Resimator in corporation with <a href="https://www.resimator.fi/" target="_blank" class="block text-white underline font-medium">Resimator</a>`,
       image: "/images/projects/resimator.png",
       url: "https://resimator.fi",
       tools: ["JQuery", "PHP", "HTML5", "SCSS"],
     },
     {
+      name: "Karnali Province Sports",
+      tagline: "Province Government",
+      content:
+        "Province Government Ministry of Social Development Karnali Province Sports Development Council",
+      desc: `Front-End development for Karnali Province Sports`,
+      image: "/images/projects/karnali-sports.png",
+      url: "https://sports.karnali.gov.np",
+      tools: ["JQuery", "PHP", "HTML5", "SCSS"],
+    },
+    {
       name: "The Nuts Lounge",
-      tagline: "",
-      content: "-",
+      tagline: "Eat healthy, stay fresh.",
+      content:
+        "Highest Quality Handmade, 100% Natural, Curated Products, Modern Farm, Alway Fresh, Sustainable.",
       desc: `Front-End development for The Nuts Lounge in corporation with <a href="https://www.everestack.com.au/" target="_blank" class="block text-white underline font-medium">Everestack</a>`,
       image: "/images/projects/thenutslounge.png",
-      url: "",
+      url: "https://thenutslounge.com.au",
       tools: ["Wordpress"],
     },
     {
@@ -170,8 +182,9 @@ const userData = {
     },
     {
       name: "Nabil Invest App",
-      tagline: "",
-      content: "-",
+      tagline: "Finance",
+      content:
+        "Nabil Invest App is a convenient way to keep track of your investments. Now keep the share market in your pocket. This app gives access to details regarding Nabil Invest DEMAT status, PMS, Today’s Share, Mutual Fund",
       desc: `Hybrid Mobile App design implementation and development for Nabil Invest App in corporation with <a href="https://amniltech.com/" target="_blank" class="block text-white underline font-medium">AMNIL Technologies</a>`,
       image: "/images/projects/nabil.jpg",
       tools: ["Ionic", "AngularJS", "HTML5", "SCSS"],
