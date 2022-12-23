@@ -95,7 +95,7 @@ const HeroSection = (props) => {
           <figure className="relative h-full">
             <StyledImage
               url={userData.bannerUrl}
-              alt="Amit Rajbhandari"
+              alt={userData.name}
               layout="fill"
             />
           </figure>

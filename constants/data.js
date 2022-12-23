@@ -2,7 +2,7 @@ const userData = {
   name: "Amit Rajbhandari",
   designation: "FrontEnd Developer",
   avatarUrl: "/avatar.png",
-  bannerUrl: "/images/banner-img.png",
+  bannerUrl: "/images/profile.png",
   email: "amit.rjbhandari@gmail.com",
   phone: "+977 9802067070",
   address: "Shankhamul, Kathmandu, Nepal",
