@@ -2,7 +2,7 @@ import React from "react";
 
 const ExperineceSection = (props) => {
   const { userData } = props;
-  
+
   return (
     <section id="experience" className="js-show-on-scroll pt-5 pb-24 xl:py-28">
       <div className="container grid grid-cols-1 xl:grid-cols-12">
@@ -17,6 +17,7 @@ const ExperineceSection = (props) => {
                 <li key={data.company} className="grid grid-cols-12 gap-5">
                   <h5 className="col-span-12 xl:col-span-4 text-lg text-primary-500 dark:text-primary-100">
                     {data.company}
+
                     <small className="block">
                       {data.startDate} - {data.endDate}
                     </small>
@@ -24,7 +25,13 @@ const ExperineceSection = (props) => {
                   <span className="seprator">
                     <span />
                   </span>
-                  <p className="col-span-12 xl:col-span-7">{data.desc}</p>
+
+                  <div className="col-span-12 xl:col-span-7">
+                    <h6 className="block text-md mb-3 font-semibold text-primary-500 dark:text-primary-100">
+                      @ {data.title}
+                    </h6>
+                    <p>{data.desc}</p>
+                  </div>
                 </li>
               );
             })}
