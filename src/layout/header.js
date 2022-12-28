@@ -32,7 +32,7 @@ const Header = (props) => {
           </StyledLink>
 
           <StyledLink classes="mx-6" url="#experience">
-            Experinces
+            Experiences
           </StyledLink>
 
           <StyledLink classes="mx-6" url="#projects">
