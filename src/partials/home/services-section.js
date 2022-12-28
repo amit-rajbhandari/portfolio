@@ -54,10 +54,10 @@ const ServicesSection = (props) => {
                 Frontend developer, UX architect, Gamer and Music lover in
                 search of flow. Working with my hands to make magic happen on
                 the internet. View my Projects, Resume, Contact Me, or send me
-                an email at
+                an email at{" "}
                 <Link
                   href={`mailto:${userData.email}`}
-                  className="block font-medium text-red-500"
+                  className="font-medium text-red-500"
                 >
                   {userData.email}.
                 </Link>

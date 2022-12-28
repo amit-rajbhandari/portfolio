@@ -102,7 +102,7 @@ const HeroSection = (props) => {
 
           <div className="flex-col items-end justify-center hidden xl:flex pb-36">
             <h4 className="mb-5 text-center text-primary-500 dark:text-white">
-              Lets Connect
+              Let&apos;s Connect
             </h4>
             <figure className="flex flex-wrap gap-5 m-0">
               {userData.socialLinks.map((item) => {
