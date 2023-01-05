@@ -34,7 +34,7 @@ const HeroSection = (props) => {
         <div className="flex flex-wrap items-center justify-between">
           <h2 className="w-full xl:w-1/2 h-24 xl:h-36 relative mb-5 text-3xl leading-normal xl:mb-0 text-primary-700 dark:text-slate-200 xl:text-7xl">
             <AnimatedText
-              text={[`Hey There, <br /> I'm ${userData.name}`]}
+              text={[`Hi there, <br /> I'm ${userData.name}`]}
               color={[resolvedTheme === "dark" ? "#ffffff" : "#296f6c"]}
             />
           </h2>
@@ -45,7 +45,7 @@ const HeroSection = (props) => {
               <small className="-mt-1 ml-1 text-3xl">+</small>
             </span>
             <span className="ml-3 text-base font-medium">
-              YEARS <br />
+              YEARS&apos; <br />
               EXPERIENCE
             </span>
           </h4>

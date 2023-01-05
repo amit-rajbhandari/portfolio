@@ -28,19 +28,19 @@ const Header = (props) => {
 
         <nav className="header-navigation">
           <StyledLink classes="mx-6" url="#services">
-            Services
+            About
           </StyledLink>
 
           <StyledLink classes="mx-6" url="#experience">
-            Experiences
+            Experience
           </StyledLink>
 
           <StyledLink classes="mx-6" url="#projects">
-            Projects
+            Work
           </StyledLink>
 
           <StyledLink classes="mx-6" url="#contact">
-            Contact me
+            Contact
           </StyledLink>
         </nav>
 

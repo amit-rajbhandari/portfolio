@@ -16,7 +16,7 @@ const Footer = (props) => {
             placeholder=""
           />
           <span className="ml-3 pl-3 border-l border-solid border-primary-500 dark:border-dark-300">
-            ©2022. All Rights Reserved
+            © 2023 All rights reserved
           </span>
         </h6>
 

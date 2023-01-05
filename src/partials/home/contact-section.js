@@ -17,18 +17,18 @@ const ContactSection = (props) => {
           >
             <div className="col-span-12 xl:col-span-8">
               <h2 className="mb-6 text-primary-500 dark:text-primary-100">
-                Let&apos;s work together on your next project
+                Reach Out To Me! Don&apos;t be shy.
               </h2>
               <p className="text-slate-500 dark:text-slate-400">
-                Don&apos;t wait untill tomorrow. Let&apos;s talk today and learn
-                how to start leveraging your business.
+                I can help design and build your next website. Let me know what
+                you need.
               </p>
             </div>
 
             <div className="col-span-12 xl:col-span-3 flex flex-col items-center justify-center ">
-              <h3 className="mb-4">Start by</h3>
+              <h3 className="mb-4">Go ahead</h3>
               <StyledLink url={`mailto:${userData.email}`} isActive>
-                saying hi
+                Say Hi
               </StyledLink>
             </div>
           </Card>

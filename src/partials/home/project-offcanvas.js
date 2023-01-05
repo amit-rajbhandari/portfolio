@@ -17,16 +17,13 @@ const ProjectOffCanvas = (props) => {
             onClick={() => handleOnClose()}
           >
             <IconAngleLeft />
-            Back to projects
+            Back
           </button>
         </header>
 
         <main className="flex-1 overflow-auto p-7">
           <h4 className="text-xl mb-5 text-primary-500 dark:text-primary-100">
             {data.name}
-            <small className="font-normal text-sm text-slate-400 dark:text-slate-100 block mt-1">
-              {data.tagline}
-            </small>
           </h4>
 
           <figure className="relative aspect-[16/9] overflow-hidden rounded-2xl">
@@ -38,10 +35,16 @@ const ProjectOffCanvas = (props) => {
             />
           </figure>
 
-          <h5 className="font-semibold text-lg mt-6 mb-2">About</h5>
-          <p>{data.content}</p>
+          <p className="mt-6">{data.content}</p>
 
-          <h5 className="font-semibold text-lg mt-6 mb-2">Technologies</h5>
+          <h5 className="font-semibold text-lg mt-6 mb-2">
+            Role & Responsibilities
+          </h5>
+          <p>{data.role}</p>
+
+          <h5 className="font-semibold text-lg mt-6 mb-2">
+            Languages, Libraries & Frameworks
+          </h5>
           <div className="flex flex-wrap gap-1">
             {data.tools.map((tool) => {
               return (
@@ -55,7 +58,10 @@ const ProjectOffCanvas = (props) => {
             })}
           </div>
 
-          <h5 className="font-semibold text-lg mt-6 mb-2">Webiste</h5>
+          <h5 className="font-semibold text-lg mt-6 mb-2">Associated with</h5>
+          <p>{data.desc}</p>
+
+          <h5 className="font-semibold text-lg mt-6 mb-2">Check it out</h5>
           {data.status !== "live" ? (
             <p>{data.status}</p>
           ) : (

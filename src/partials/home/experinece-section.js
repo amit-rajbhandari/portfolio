@@ -8,13 +8,16 @@ const ExperineceSection = (props) => {
       <div className="container grid grid-cols-1 xl:grid-cols-12">
         <div className="xl:col-start-3 xl:col-end-11">
           <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-3xl xl:text-5xl text-center">
-            My Work Experience
+            My Experience
           </h2>
 
           <ul className="experience-timeline">
             {userData.experience.map((data) => {
               return (
-                <li key={data.company} className="grid grid-cols-12 gap-5">
+                <li
+                  key={data.company}
+                  className="grid grid-cols-12 gap-5 group"
+                >
                   <h5 className="col-span-12 xl:col-span-4 text-lg text-primary-500 dark:text-primary-100">
                     {data.company}
 
@@ -30,7 +33,11 @@ const ExperineceSection = (props) => {
                     <h6 className="block text-md mb-3 font-semibold text-primary-500 dark:text-primary-100">
                       @ {data.title}
                     </h6>
-                    <p>{data.desc}</p>
+                    <ul className="flex flex-col gap-3 list-disc pl-6 text-justify leading-7 group-first-of-type:mb-7">
+                      {data.desc.map((item) => {
+                        return <li key={item.id}>{item.description}</li>;
+                      })}
+                    </ul>
                   </div>
                 </li>
               );
