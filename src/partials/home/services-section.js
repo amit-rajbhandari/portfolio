@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Card } from "@src/components";
 import { StyledImage } from "@src/styled-component";
 
@@ -41,26 +40,30 @@ const ServicesSection = (props) => {
 
             <div className="order-1 xl:order-2 col-span-12 xl:col-span-6 mb-7 xl:mb-0 text-slate-700 dark:text-slate-200 leading-loose">
               <h2 className="mb-10 text-primary-900 dark:text-primary-100 text-3xl xl:text-5xl text-center">
-                How Do I Help?
+                My Approach
               </h2>
-              <p className="mb-5">
-                I will help you with finding a solution and solve your problems,
-                I use process{" "}
-                <span className="text-red-400 font-medium">Mobile First</span>{" "}
-                coding pattern to simplify the User Experinces in handheld
-                devices.
+              <p className="mb-5 text-base text-justify">
+                <span className="block text-primary-500 font-semibold mb-1">
+                  01. Research
+                </span>
+                Understand the client’s needs and requirements completely and
+                build on the knowledge related to them. Determine methods to
+                address those requirements.
               </p>
-              <p>
-                Frontend developer, UX architect, Gamer and Music lover in
-                search of flow. Working with my hands to make magic happen on
-                the internet. View my Projects, Resume, Contact Me, or send me
-                an email at{" "}
-                <Link
-                  href={`mailto:${userData.email}`}
-                  className="font-medium text-red-500"
-                >
-                  {userData.email}.
-                </Link>
+              <p className="mb-5 text-base text-justify">
+                <span className="block text-primary-500 font-semibold mb-1">
+                  02. Design
+                </span>
+                Create prototypes of a variety of degrees of fidelity to allow
+                for more decision-making. The cross functional process includes
+                market and technical research.
+              </p>
+              <p className="text-base text-justify">
+                <span className="block text-primary-500 font-semibold mb-1">
+                  03. Develop
+                </span>
+                Utilizing the findings from the research and design phases to
+                produce commercial products for the customer.
               </p>
             </div>
           </div>

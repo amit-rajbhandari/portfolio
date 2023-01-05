@@ -34,7 +34,7 @@ const MobileNavigator = () => {
           className={`${activeSection === "Services" ? "active" : ""}`}
           onClick={() => onNavigateView("Services")}
         >
-          <IconBarcode /> Services
+          <IconBarcode /> About
         </Link>
 
         <Link
@@ -64,7 +64,7 @@ const MobileNavigator = () => {
           className={`${activeSection === "Projects" ? "active" : ""}`}
         >
           <IconCode />
-          Projects
+          Work
         </Link>
 
         <Link

@@ -27,7 +27,7 @@ const ProjectSection = (props) => {
   return (
     <section id="projects" className="js-show-on-scroll py-5 xl:py-28">
       <h2 className="mb-16 text-primary-500 dark:text-primary-100 text-3xl xl:text-5xl text-center">
-        My Latest Works
+        My Work
       </h2>
 
       <Splide options={projectSlideOtion}>
@@ -49,8 +49,6 @@ const ProjectSection = (props) => {
                   layout="fill"
                 />
                 <h4>{projects.name}</h4>
-                {/* eslint-disable-next-line react/no-danger */}
-                <p dangerouslySetInnerHTML={{ __html: projects.desc }} />
                 <div className="tools">
                   {projects.tools.map((tool) => {
                     return (
