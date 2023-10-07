@@ -8,6 +8,7 @@ const userData = {
   address: "Shankhamul, Kathmandu, Nepal",
   about: {},
   totalExperience: 8,
+  startYear: "10/15/2014",
   experience: [
     {
       company: "Resimator Oy",

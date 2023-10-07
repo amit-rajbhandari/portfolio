@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { differenceInYears } from "date-fns";
 import { AnimatedText, StyledImage } from "@src/styled-component";
 
 const HeroSection = (props) => {
   const { userData } = props;
 
   const { resolvedTheme } = useTheme();
+
+  const totalExperience = useMemo(
+    () => differenceInYears(new Date(), new Date(userData.startYear)),
+    [userData]
+  );
 
   return (
     <section
@@ -41,8 +47,7 @@ const HeroSection = (props) => {
 
           <h4 className="flex text-5xl font-bold">
             <span className="flex items-start">
-              {userData.totalExperience}{" "}
-              <small className="-mt-1 ml-1 text-3xl">+</small>
+              {totalExperience} <small className="-mt-1 ml-1 text-3xl">+</small>
             </span>
             <span className="ml-3 text-base font-medium">
               YEARS&apos; <br />
