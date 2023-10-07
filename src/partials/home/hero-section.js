@@ -66,7 +66,7 @@ const HeroSection = (props) => {
             <figure className="flex flex-wrap gap-8 m-0">
               {userData.tools.map((item, index) => {
                 return (
-                  index <= 9 && (
+                  index <= 10 && (
                     <Link key={item.name} href="/">
                       <StyledImage
                         width={40}
@@ -87,7 +87,7 @@ const HeroSection = (props) => {
                 <span className="font-normal group-hover:animate-bounce">
                   +
                 </span>{" "}
-                {userData.tools.length - 9}
+                {userData.tools.length - 10}
               </Link>
             </figure>
           </div>

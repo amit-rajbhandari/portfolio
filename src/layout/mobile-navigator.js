@@ -25,7 +25,11 @@ const MobileNavigator = () => {
     <section className={`mobile-nav-wrapper ${scrollPos > 96 ? "!flex" : ""}`}>
       <nav
         className={`mobile-nav 
-        ${windowWidth >= MediaBreakpoints.xl && scrollPos > 96 ? "animate-in" : ""}
+        ${
+          windowWidth >= MediaBreakpoints.xl && scrollPos > 96
+            ? "animate-in"
+            : ""
+        }
         ${windowWidth < MediaBreakpoints.xl ? "animate-in" : ""}
         `}
       >
