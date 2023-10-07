@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { differenceInYears } from "date-fns";
 import { AnimatedText, StyledImage } from "@src/styled-component";
 
 const HeroSection = (props) => {
   const { userData } = props;
 
   const { resolvedTheme } = useTheme();
+
+  const totalExperience = useMemo(
+    () => differenceInYears(new Date(), new Date(userData.startYear)),
+    [userData]
+  );
 
   return (
     <section
@@ -41,8 +47,7 @@ const HeroSection = (props) => {
 
           <h4 className="flex text-5xl font-bold">
             <span className="flex items-start">
-              {userData.totalExperience}{" "}
-              <small className="-mt-1 ml-1 text-3xl">+</small>
+              {totalExperience} <small className="-mt-1 ml-1 text-3xl">+</small>
             </span>
             <span className="ml-3 text-base font-medium">
               YEARS&apos; <br />
@@ -66,7 +71,7 @@ const HeroSection = (props) => {
             <figure className="flex flex-wrap gap-8 m-0">
               {userData.tools.map((item, index) => {
                 return (
-                  index <= 9 && (
+                  index <= 10 && (
                     <Link key={item.name} href="/">
                       <StyledImage
                         width={40}
@@ -87,7 +92,7 @@ const HeroSection = (props) => {
                 <span className="font-normal group-hover:animate-bounce">
                   +
                 </span>{" "}
-                {userData.tools.length - 9}
+                {userData.tools.length - 10}
               </Link>
             </figure>
           </div>

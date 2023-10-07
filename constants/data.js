@@ -7,13 +7,14 @@ const userData = {
   phone: "+977 9802067070",
   address: "Shankhamul, Kathmandu, Nepal",
   about: {},
-  totalExperience: 7,
+  totalExperience: 8,
+  startYear: "10/15/2014",
   experience: [
     {
       company: "Resimator Oy",
       startDate: "Dec 2018",
       endDate: "Present",
-      title: "UI/UX & Front End Developer",
+      title: "Senior UI/UX & Front End Developer",
       desc: [
         {
           id: 1,
@@ -259,6 +260,11 @@ const userData = {
   ],
   socialLinks: [
     {
+      name: "github",
+      url: "https://github.com/amit-rajbhandari",
+      icon: "/images/social/github.svg",
+    },
+    {
       name: "linkedin",
       url: "https://www.linkedin.com/in/amit-rajbhandari-789aab28",
       icon: "/images/social/linkedin.svg",
@@ -282,10 +288,14 @@ const userData = {
   tools: [
     { name: "JavaScript", image: "/images/social/javascript.svg" },
     { name: "TypeScript", image: "/images/social/typescript.svg" },
+    { name: "Jest", image: "/images/social/jest.svg" },
     { name: "React", image: "/images/social/react.svg" },
+    { name: "Formik", image: "/images/social/formik.svg" },
+    { name: "React Hook Form", image: "/images/social/reacthookform.png" },
     { name: "Redux", image: "/images/social/redux.svg" },
-    { name: "Angular", image: "/images/social/angular.svg" },
+    { name: "React Query", image: "/images/social/react-query.svg" },
     { name: "Next.js", image: "/images/social/nextjs.svg" },
+    { name: "Angular", image: "/images/social/angular.svg" },
     { name: "WordPress", image: "/images/social/wordpress.svg" },
     { name: "HTML5", image: "/images/social/html.svg" },
     { name: "SASS", image: "/images/social/sass.svg" },

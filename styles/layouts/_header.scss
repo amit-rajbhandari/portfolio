@@ -1,21 +1,21 @@
 .main-header {
   @apply w-full h-24 absolute top-0 left-0 py-5 z-10;
 
-  @include media-breakpoint-down('xl') {
+  @include media-breakpoint-down("xl") {
     @apply h-16 fixed py-3 border-b border-solid border-slate-300 bg-white/90;
   }
 
   .header-navigation {
     @apply flex flex-1 justify-center;
 
-    @include media-breakpoint-down('xl') {
+    @include media-breakpoint-down("xl") {
       @apply hidden;
     }
   }
 
   &.dark {
-    @include media-breakpoint-down('xl') {
-      @apply border-dark-400 bg-dark-500/90
+    @include media-breakpoint-down("xl") {
+      @apply border-dark-400 bg-dark-500/90;
     }
 
     .header-navigation {
@@ -28,7 +28,7 @@
         }
 
         &.active {
-          @apply text-red-500
+          @apply text-red-500;
         }
       }
     }

@@ -48,7 +48,7 @@ const AnimatedText = (props) => {
   };
 
   useEffect(() => {
-    if(color){
+    if (color) {
       animText(text, "text", color);
     }
   }, [color]);
