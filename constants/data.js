@@ -266,7 +266,7 @@ const userData = {
     },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/amit-rajbhandari-789aab28",
+      url: "https://www.linkedin.com/in/amit-rajbhandari/",
       icon: "/images/social/linkedin.svg",
     },
     {
