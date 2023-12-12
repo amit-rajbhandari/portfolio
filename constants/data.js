@@ -8,7 +8,7 @@ const userData = {
   address: "Shankhamul, Kathmandu, Nepal",
   about: {},
   totalExperience: 8,
-  startYear: "10/15/2014",
+  startYear: "10/15/2015",
   experience: [
     {
       company: "Resimator Oy",
@@ -268,16 +268,6 @@ const userData = {
       name: "linkedin",
       url: "https://www.linkedin.com/in/amit-rajbhandari/",
       icon: "/images/social/linkedin.svg",
-    },
-    {
-      name: "facebook",
-      url: "https://www.facebook.com/amit.rajBhandari9802",
-      icon: "/images/social/facebook.svg",
-    },
-    {
-      name: "instagram",
-      url: "https://www.instagram.com/amit_rajbhandari",
-      icon: "/images/social/instagram.svg",
     },
     {
       name: "behance",

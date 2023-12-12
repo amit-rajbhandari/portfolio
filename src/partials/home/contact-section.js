@@ -17,10 +17,10 @@ const ContactSection = (props) => {
           >
             <div className="col-span-12 xl:col-span-8">
               <h2 className="mb-6 text-primary-500 dark:text-primary-100">
-                Reach Out To Me! Don&apos;t be shy.
+                Reach Out To Me!
               </h2>
               <p className="text-slate-500 dark:text-slate-400">
-                I can help design and build your next website. Let me know what
+                I can help design and build your next project. Let me know what
                 you need.
               </p>
             </div>
