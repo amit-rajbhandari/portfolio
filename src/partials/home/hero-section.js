@@ -17,7 +17,7 @@ const HeroSection = (props) => {
   return (
     <section
       id="about"
-      className="h-[80vh] xl:h-[calc(100vh-5rem)] flex relative pt-2 xl:pt-10 z-1"
+      className="h-[100vh] xl:h-[calc(100vh-5rem)] flex relative pt-2 xl:pt-10 z-1"
     >
       <div className="aurora-bg">
         <picture>
@@ -97,7 +97,7 @@ const HeroSection = (props) => {
             </figure>
           </div>
 
-          <figure className="relative h-full w-[240px] sm:w-[470px] max-w-full mx-auto">
+          <figure className="relative h-full w-[580px] mx-auto">
             <StyledImage
               url={userData.bannerUrl}
               alt={userData.name}
