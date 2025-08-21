@@ -11,7 +11,8 @@ const Layout = (props) => {
   return (
     <>
       <Header theme={resolvedTheme} setTheme={setTheme} />
-      <main className={`main pt-20 section-divider ${resolvedTheme}`}>
+      {/* pt-20 */}
+      <main className={`main section-divider ${resolvedTheme}`}>
         {children}
       </main>
       <Footer theme={resolvedTheme} />
