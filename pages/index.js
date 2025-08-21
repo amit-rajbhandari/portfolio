@@ -5,7 +5,7 @@ import { PageMeta } from "@src/components";
 import {
   ContactSection,
   ExperineceSection,
-  HeroSection,
+  HeroSectionNoImage,
   ProjectSection,
   ServicesSection,
   ToolsSection,
@@ -23,7 +23,7 @@ const Home = () => {
     <>
       <PageMeta />
       {(windowWidth >= MediaBreakpoints.xl || activeSection === "About") && (
-        <HeroSection userData={userData} />
+        <HeroSectionNoImage userData={userData} />
       )}
 
       {(windowWidth >= MediaBreakpoints.xl || activeSection === "Services") && (

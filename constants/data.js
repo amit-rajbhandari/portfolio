@@ -8,7 +8,7 @@ const userData = {
   address: "Shankhamul, Kathmandu, Nepal",
   about: {},
   totalExperience: 8,
-  startYear: "10/15/2015",
+  startYear: "10/04/2016",
   experience: [
     {
       company: "Resimator Oy",
@@ -19,23 +19,28 @@ const userData = {
         {
           id: 1,
           description:
-            "In the meantime immersed in creating accessible Angular components for Izy Portal - a unique back office system for building management with smart modules for tenants and service providers.",
+            "In the meantime, immersed in the front-end development of Mainder for Property Manager, an operations management system, streamlining property management tasks such as customer service and invoicing.",
         },
         {
           id: 2,
           description:
-            "Interfaced with designers and developers to ensure thoughtful and coherent user experiences across Resimator’s CMS kioskcloud.io manages smart signage and self-service kiosk devices.",
+            "Led the front-end development of Mainder’s cross-platform mobile apps for residents and partners using React Native with Expo, delivering seamless Android and iOS experiences.",
         },
         {
           id: 3,
           description:
-            "Architected and implemented the front end of Myldre Portal - an innovative information-sharing platform for Norway’s largest commercial property manager.",
+            "Created accessible Angular components for Izy Portal, a comprehensive property management platform featuring smart modules for tenants and service providers.",
+        },
+        {
+          id: 4,
+          description:
+            "Contributed to the development of a product management module built on React for KioskCloud.io used by smart screens and self-service kiosks.",
         },
       ],
     },
     {
       company: "Amnil Technologies",
-      startDate: "Oct 2014",
+      startDate: "Apr 2016",
       endDate: "Nov 2018",
       title: "Front End Developer",
       desc: [
@@ -302,9 +307,9 @@ const userData = {
   resumeUrl: "",
   services: [
     {
-      name: "Website and CMS",
-      icon: "/images/icons/icon-web-dev.svg",
-      total: 22,
+      name: "Web Application",
+      icon: "/images/icons/icon-web-app-dev.svg",
+      total: 10,
     },
     {
       name: "Hybrid Mobile App",
@@ -312,9 +317,9 @@ const userData = {
       total: 5,
     },
     {
-      name: "Web Application",
-      icon: "/images/icons/icon-web-app-dev.svg",
-      total: 10,
+      name: "Website and CMS",
+      icon: "/images/icons/icon-web-dev.svg",
+      total: 22,
     },
   ],
 };
