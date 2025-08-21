@@ -4,21 +4,26 @@ import Link from "next/link";
 import { differenceInYears } from "date-fns";
 import { StyledImage } from "@src/styled-component";
 import { DotGrid } from "@src/ReactBits";
+import { useTheme } from "next-themes";
 
 const HeroSectionNoImage = (props) => {
   const { userData } = props;
+
+  const { theme } = useTheme();
 
   const totalExperience = useMemo(
     () => differenceInYears(new Date(), new Date(userData.startYear)),
     [userData]
   );
 
+  console.log(theme);
+
   return (
     <section
       id="about"
       className="h-[100vh] flex items-center relative  pt-20 pb-2 xl:pb-10 z-1"
     >
-      {/* <div className="aurora-bg">
+      <div className="aurora-bg">
         <picture>
           <source srcSet="/images/aurora.avif" type="image/avif" />
           <img
@@ -33,13 +38,13 @@ const HeroSectionNoImage = (props) => {
             alt="Aurora BG"
           />
         </picture>
-      </div> */}
+      </div>
 
       <div className="absolute top-0 left-0 w-full h-full">
         <DotGrid
           dotSize={5}
           gap={15}
-          baseColor="#fafafa"
+          baseColor={theme === "light" ? "#fafafa" : "#161626"}
           activeColor="#296f6c"
           proximity={120}
           shockRadius={250}
@@ -109,7 +114,7 @@ const HeroSectionNoImage = (props) => {
           </figure>
         </div>
 
-        <div className="flex justify-end items-end xl:col-span-7 xl:pl-48">
+        <div className="hidden justify-end items-end xl:flex xl:col-span-7 xl:pl-48">
           <figure className="flex flex-wrap gap-8 justify-end m-0">
             {userData.tools.map((item, index) => {
               return (
@@ -137,69 +142,6 @@ const HeroSectionNoImage = (props) => {
             </Link>
           </figure>
         </div>
-
-        {/* <div className="grid relative flex-1 grid-cols-1 xl:grid-cols-3 -z-1">
-          <div className="hidden flex-col justify-center space-y-20 xl:flex">
-            <h4>
-              Email
-              <Link
-                href={`mailto:${userData.email}`}
-                className="block font-medium text-red-500"
-              >
-                {userData.email}
-              </Link>
-            </h4>
-
-            <figure className="flex flex-wrap gap-8 m-0">
-              {userData.tools.map((item, index) => {
-                return (
-                  index <= 10 && (
-                    <Link key={item.name} href="/">
-                      <StyledImage
-                        width={40}
-                        height={40}
-                        url={item.image}
-                        alt={item.name}
-                        placeholder=""
-                      />
-                    </Link>
-                  )
-                );
-              })}
-              <Link
-                href="#more-tools"
-                passHref
-                className="group flex items-center justify-center self-start relative px-2 text-red-500 text-[2rem] font-semibold leading-none z-1 before:w-full before:h-3.5 before:content-[''] before:absolute before:-bottom-0.5 before:left-0 before:rounded before:shadow-lg before:shadow-yellow-500 before:bg-yellow-500 before:-z-1"
-              >
-                <span className="font-normal group-hover:animate-bounce">
-                  +
-                </span>{" "}
-                {userData.tools.length - 10}
-              </Link>
-            </figure>
-          </div>
-
-          <div className="hidden flex-col justify-center items-end pb-36 xl:flex">
-            <h4 className="mb-5 text-center text-primary-500 dark:text-white">
-              Let&apos;s Connect
-            </h4>
-            <figure className="flex flex-wrap gap-5 m-0">
-              {userData.socialLinks.map((item) => {
-                return (
-                  <Link key={item.name} href={item.url} target="_blank">
-                    <StyledImage
-                      width={30}
-                      height={30}
-                      url={item.icon}
-                      alt={item.name}
-                      placeholder=""
-                    />
-                  </Link>
-                );
-              })}
-            </figure>
-          </div>
-        </div> */}
       </div>
     </section>
   );
