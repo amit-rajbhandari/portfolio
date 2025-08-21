@@ -274,11 +274,11 @@ const userData = {
       url: "https://www.linkedin.com/in/amit-rajbhandari/",
       icon: "/images/social/linkedin.svg",
     },
-    {
-      name: "behance",
-      url: "https://www.behance.net/amitrb",
-      icon: "/images/social/behance.svg",
-    },
+    // {
+    //   name: "behance",
+    //   url: "https://www.behance.net/amitrb",
+    //   icon: "/images/social/behance.svg",
+    // },
   ],
   tools: [
     { name: "JavaScript", image: "/images/social/javascript.svg" },
