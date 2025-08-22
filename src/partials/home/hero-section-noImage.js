@@ -9,14 +9,12 @@ import { useTheme } from "next-themes";
 const HeroSectionNoImage = (props) => {
   const { userData } = props;
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const totalExperience = useMemo(
     () => differenceInYears(new Date(), new Date(userData.startYear)),
     [userData]
   );
-
-  console.log(theme);
 
   return (
     <section
@@ -44,7 +42,7 @@ const HeroSectionNoImage = (props) => {
         <DotGrid
           dotSize={5}
           gap={15}
-          baseColor={theme === "light" ? "#fafafa" : "#161626"}
+          baseColor={resolvedTheme === "light" ? "#fafafa" : "#161626"}
           activeColor="#296f6c"
           proximity={120}
           shockRadius={250}
