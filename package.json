@@ -14,7 +14,7 @@
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^1.4.1",
-    "date-fns": "^3.0.0",
+    "date-fns": "^3.6.0",
     "gsap": "^3.13.0",
     "motion": "^12.23.12",
     "next": "^15.2.2",
